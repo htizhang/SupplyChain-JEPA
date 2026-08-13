@@ -1,0 +1,43 @@
+{
+  "seed": 20260802,
+  "forbidden_downstream_sources": [
+    "FreshRetailNet-50K",
+    "Cargo2000",
+    "gym-invmgmt",
+    "gym_invmgmt",
+    "OR-Gym",
+    "or_gym",
+    "or-gymnax",
+    "downstream-application"
+  ],
+  "tensorization": {
+    "max_tokens": 192,
+    "target_window_steps": 4
+  },
+  "dynamics_training": {
+    "learning_rate": 0.0002,
+    "weight_decay": 0.05,
+    "betas": [0.9, 0.95],
+    "gradient_clip": 1.0,
+    "gradient_accumulation_steps": 2,
+    "warmup_fraction": 0.05,
+    "minimum_lr_ratio": 0.1,
+    "horizons": [1, 2, 4, 8],
+    "source_sampling_weights": {
+      "stockpyl": 55,
+      "mabim": 45
+    },
+    "paired_difference_weight": 0.25,
+    "paired_difference_scale_floor": 0.001,
+    "encoder_source": "target",
+    "include_action_controls": true,
+    "control_margin_weight": 0.1,
+    "control_margin": 0.05,
+    "rollout_two_step_weight": 0.1,
+    "branch_contrastive_weight": 0.25,
+    "branch_contrastive_temperature": 0.1,
+    "branch_contrastive_mode": "effect_centered",
+    "target_window_steps": 1,
+    "shuffled_counterfactual_weight": 0.5
+  }
+}

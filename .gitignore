@@ -1,0 +1,42 @@
+.DS_Store
+.idea/
+.vscode/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model and fitted artifacts live outside Git
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.joblib
+*.pkl
+
+# Raw and derived datasets
+data/raw/
+data/processed/
+data/cache/
+*.parquet
+*.arrow
+
+# Large or transient evaluation outputs
+results/raw/
+results/cache/
+evaluations/**/artifacts/
+evaluations/**/outputs/

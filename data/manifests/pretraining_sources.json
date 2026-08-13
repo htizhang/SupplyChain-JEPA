@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "downstream_exclusions": [
+    "FreshRetailNet-50K",
+    "Cargo2000",
+    "gym-invmgmt",
+    "substantially overlapping gym-invmgmt environment lineages"
+  ],
+  "state_sources": {
+    "observational": [
+      "M5 Forecasting",
+      "BPI Challenge 2019",
+      "LaDe",
+      "Olist Brazilian E-Commerce",
+      "planned-versus-actual delivery routes"
+    ],
+    "simulated": [
+      "Stockpyl",
+      "SupplyNetPy",
+      "MABIM with generated inputs",
+      "ISOMORPH",
+      "MilestoneFlow"
+    ]
+  },
+  "dynamics_sources": [
+    "Stockpyl paired branches",
+    "MABIM paired branches with generated inputs"
+  ],
+  "observational_sources_are_counterfactual": false
+}

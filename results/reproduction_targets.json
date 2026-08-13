@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "archived_reference_metrics",
+  "note": "Reference values are retained for comparison and are not substituted for fresh release results.",
+  "model_revision": "493786fda0855b72f61235068c62cc7b2a11fbec",
+  "applications": {
+    "demand_recovery": {
+      "metric": "wape",
+      "direction": "lower",
+      "baseline": 0.41701661785209065,
+      "pretrained_system": 0.3978750022662813,
+      "relative_improvement_percent": 4.590132566994868,
+      "required_split_wins": 3,
+      "total_splits": 3
+    },
+    "sla_risk": {
+      "metric": "average_precision",
+      "direction": "higher",
+      "baseline": 0.3852873947,
+      "matched_random_mean": 0.3962531591,
+      "pretrained_system": 0.4137814256,
+      "relative_improvement_percent": 7.3955,
+      "adjacent_diagnostic": {
+        "baseline": 0.499222,
+        "pretrained_system": 0.47754
+      }
+    },
+    "action_selection": {
+      "metric": "action_regret",
+      "direction": "lower",
+      "public_history_baseline": 9.274,
+      "matched_random": 5.972,
+      "pretrained_system": 5.618,
+      "pretrained_split_std": 0.559,
+      "relative_to_matched_random_percent": 5.9,
+      "required_split_wins": 4,
+      "total_splits": 5
+    }
+  }
+}

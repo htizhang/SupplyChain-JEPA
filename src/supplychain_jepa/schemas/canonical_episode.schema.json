@@ -1,0 +1,667 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://supplychain-jepa.local/schemas/synthetic_episode.schema.json",
+  "title": "SupplyChain-JEPA canonical synthetic episode",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "simulator",
+    "split",
+    "episode",
+    "branch",
+    "objective_eligibility",
+    "topology",
+    "steps",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "supplychain-jepa.synthetic-episode.v1"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "simulator": {
+      "$ref": "#/$defs/simulator"
+    },
+    "split": {
+      "enum": [
+        "pretrain_train",
+        "pretrain_dev",
+        "pretrain_test",
+        "simulator_holdout"
+      ]
+    },
+    "episode": {
+      "$ref": "#/$defs/episode"
+    },
+    "branch": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/branch"
+        }
+      ]
+    },
+    "state_twin": {
+      "$ref": "#/$defs/stateTwin"
+    },
+    "objective_eligibility": {
+      "$ref": "#/$defs/objectiveEligibility"
+    },
+    "topology": {
+      "$ref": "#/$defs/topology"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    }
+  },
+  "$defs": {
+    "featureValue": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/featureValue"
+      }
+    },
+    "simulator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "name",
+        "version",
+        "source_repository",
+        "source_commit",
+        "license"
+      ],
+      "properties": {
+        "family": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "source_repository": {
+          "type": "string"
+        },
+        "source_commit": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      }
+    },
+    "episode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "episode_id",
+        "world_id",
+        "config_id",
+        "seed",
+        "time_unit",
+        "horizon",
+        "exogenous_stream_id",
+        "domain_parameters"
+      ],
+      "properties": {
+        "episode_id": {
+          "type": "string"
+        },
+        "world_id": {
+          "type": "string"
+        },
+        "config_id": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "time_unit": {
+          "type": "string"
+        },
+        "horizon": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "exogenous_stream_id": {
+          "type": "string"
+        },
+        "domain_parameters": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "branch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "branch_group_id",
+        "branch_id",
+        "branch_at",
+        "common_random_numbers"
+      ],
+      "properties": {
+        "branch_group_id": {
+          "type": "string"
+        },
+        "branch_id": {
+          "type": "string"
+        },
+        "branch_at": {
+          "type": "number",
+          "minimum": 0
+        },
+        "common_random_numbers": {
+          "const": true
+        }
+      }
+    },
+    "stateTwinIntervention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "supplier_regime",
+        "observation_lag_periods"
+      ],
+      "properties": {
+        "supplier_regime": {
+          "enum": [
+            "reference",
+            "one_step_worse"
+          ]
+        },
+        "observation_lag_periods": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "stateTwin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "twin_group_id",
+        "role",
+        "common_random_numbers",
+        "public_exogenous_stream_id",
+        "base_random_field_digest",
+        "action_tape_id",
+        "action_tape_semantics",
+        "intervention"
+      ],
+      "properties": {
+        "twin_group_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "reference",
+            "supplier_stress_observation_lag"
+          ]
+        },
+        "common_random_numbers": {
+          "const": true
+        },
+        "public_exogenous_stream_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_random_field_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "action_tape_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "action_tape_semantics": {
+          "const": "controlled_shared_open_loop"
+        },
+        "intervention": {
+          "$ref": "#/$defs/stateTwinIntervention"
+        }
+      }
+    },
+    "objectiveEligibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state_jepa",
+        "dynamics_jepa",
+        "decision_heads"
+      ],
+      "properties": {
+        "state_jepa": {
+          "type": "boolean"
+        },
+        "dynamics_jepa": {
+          "type": "boolean"
+        },
+        "decision_heads": {
+          "type": "boolean"
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "node_id",
+        "node_type",
+        "features"
+      ],
+      "properties": {
+        "node_id": {
+          "type": "string"
+        },
+        "node_type": {
+          "type": "string"
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "edge_id",
+        "source",
+        "target",
+        "edge_type",
+        "features"
+      ],
+      "properties": {
+        "edge_id": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "edge_type": {
+          "type": "string"
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "topology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "topology_id",
+        "nodes",
+        "edges"
+      ],
+      "properties": {
+        "topology_id": {
+          "type": "string"
+        },
+        "nodes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/node"
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          }
+        }
+      }
+    },
+    "entityState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_id",
+        "entity_type",
+        "node_id",
+        "product_id",
+        "features"
+      ],
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "entity_type": {
+          "type": "string"
+        },
+        "node_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "product_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "edgeState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "edge_id",
+        "features"
+      ],
+      "properties": {
+        "edge_id": {
+          "type": "string"
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id",
+        "event_type",
+        "entity_id",
+        "node_id",
+        "event_time",
+        "report_time",
+        "observed",
+        "features"
+      ],
+      "properties": {
+        "event_id": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "entity_id": {
+          "type": "string"
+        },
+        "node_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "event_time": {
+          "type": "number"
+        },
+        "report_time": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "observed": {
+          "type": "boolean"
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entities",
+        "edges",
+        "global",
+        "events"
+      ],
+      "properties": {
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entityState"
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edgeState"
+          }
+        },
+        "global": {
+          "$ref": "#/$defs/features"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "status",
+        "age_steps",
+        "reason"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^(observation|latent_state)\\.(entities|edges|global|events)(\\.[^.]+){0,2}$"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "censored",
+            "delayed",
+            "missing",
+            "outage",
+            "not_applicable"
+          ]
+        },
+        "age_steps": {
+          "type": "number",
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entities",
+        "edges",
+        "global",
+        "events",
+        "status"
+      ],
+      "properties": {
+        "entities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entityState"
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edgeState"
+          }
+        },
+        "global": {
+          "$ref": "#/$defs/features"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        },
+        "status": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/status"
+          }
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "action_type",
+        "actor_id",
+        "target_id",
+        "quantity",
+        "features"
+      ],
+      "properties": {
+        "action_type": {
+          "type": "string"
+        },
+        "actor_id": {
+          "type": "string"
+        },
+        "target_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "features": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    },
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "t",
+        "clock",
+        "latent_state",
+        "observation",
+        "actions",
+        "outcomes",
+        "exogenous_digest",
+        "terminal"
+      ],
+      "properties": {
+        "t": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clock": {
+          "type": "number",
+          "minimum": 0
+        },
+        "latent_state": {
+          "$ref": "#/$defs/state"
+        },
+        "observation": {
+          "$ref": "#/$defs/observation"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          }
+        },
+        "outcomes": {
+          "$ref": "#/$defs/features"
+        },
+        "exogenous_digest": {
+          "type": "string"
+        },
+        "terminal": {
+          "type": "boolean"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adapter_version",
+        "generator",
+        "causal_semantics",
+        "observation_semantics",
+        "source_files"
+      ],
+      "properties": {
+        "adapter_version": {
+          "type": "string"
+        },
+        "generator": {
+          "type": "string"
+        },
+        "causal_semantics": {
+          "type": "string"
+        },
+        "observation_semantics": {
+          "type": "string"
+        },
+        "source_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "runtime_dependencies": {
+          "$ref": "#/$defs/features"
+        }
+      }
+    }
+  }
+}

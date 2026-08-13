@@ -1,0 +1,90 @@
+{
+  "all_release_gates_passed": true,
+  "applications": {
+    "action_selection": {
+      "matched_random_regret_mean": 6.119210905431089,
+      "matched_random_regret_sample_sd": 0.7460156814216308,
+      "pretrained_regret_mean": 5.8834925562037785,
+      "pretrained_regret_sample_sd": 0.3359112208618897,
+      "pretrained_split_wins_vs_matched_random": 3,
+      "public_history_baseline_regret": 9.274,
+      "relative_reduction_vs_matched_random": 0.03852103692293063,
+      "relative_reduction_vs_public_history_baseline": 0.3655927802238754,
+      "total_splits": 5
+    },
+    "demand_recovery": {
+      "baseline_wape": 0.4169517579530725,
+      "jepa_system_wape": 0.3991166059452925,
+      "per_mask_seed": [
+        {
+          "baseline_wape": 0.41986601071730895,
+          "mask_seed": 11,
+          "pretrained_system_wape": 0.4023256419684963,
+          "relative_wape_improvement": 0.041776110237754835
+        },
+        {
+          "baseline_wape": 0.4147620221236232,
+          "mask_seed": 29,
+          "pretrained_system_wape": 0.396648251591199,
+          "relative_wape_improvement": 0.04367268352989472
+        },
+        {
+          "baseline_wape": 0.41623591348657396,
+          "mask_seed": 47,
+          "pretrained_system_wape": 0.3983855379697474,
+          "relative_wape_improvement": 0.04288523632500619
+        }
+      ],
+      "relative_wape_improvement": 0.04277509728064822,
+      "test_seed_count": 3,
+      "winning_test_seeds": 3
+    },
+    "sla_risk": {
+      "adjacent_boundary": {
+        "baseline_auprc": 0.4965798413212018,
+        "matched_random_auprc_mean": 0.47848278412881473,
+        "positives": 468,
+        "pretrained_auprc": 0.4773906316576565,
+        "processes": 1696,
+        "relative_pretrained_vs_baseline": -0.0386427479868906,
+        "relative_pretrained_vs_matched_random": -0.0022825324283020088
+      },
+      "confirmation": {
+        "baseline_auprc": 0.38617012815654855,
+        "matched_random_auprc_mean": 0.3874903163248708,
+        "positives": 36,
+        "pretrained_auprc": 0.41219964825030353,
+        "processes": 126,
+        "relative_pretrained_vs_baseline": 0.06740428167764168,
+        "relative_pretrained_vs_matched_random": 0.06376761143294352
+      },
+      "development": {
+        "baseline_auprc": 0.3945156814671609,
+        "matched_random_auprc_mean": 0.412902187442333,
+        "positives": 67,
+        "pretrained_auprc": 0.4314584550017466,
+        "processes": 230,
+        "relative_pretrained_vs_baseline": 0.09364082410412577,
+        "relative_pretrained_vs_matched_random": 0.0449410735127318
+      }
+    }
+  },
+  "evaluation_date": "2026-08-13",
+  "model_revision": "493786fda0855b72f61235068c62cc7b2a11fbec",
+  "release_gates": {
+    "action_selection": {
+      "criterion": "at least 20 percent lower regret than the fixed public-history baseline; matched random remains an attribution diagnostic",
+      "passed": true
+    },
+    "demand_recovery": {
+      "criterion": "at least 4 percent lower pooled WAPE and wins on all three mask seeds",
+      "passed": true
+    },
+    "sla_risk": {
+      "criterion": "at least 5 percent higher confirmation AUPRC with the adjacent boundary reported",
+      "passed": true
+    }
+  },
+  "schema_version": 1,
+  "status": "complete"
+}

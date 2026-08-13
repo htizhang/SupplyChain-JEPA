@@ -1,0 +1,17 @@
+{
+  "d_model": 384,
+  "n_heads": 12,
+  "encoder_layers": 6,
+  "encoder_ffn_dim": 1536,
+  "state_predictor_layers": 3,
+  "dynamics_predictor_layers": 4,
+  "predictor_ffn_dim": 1536,
+  "dropout": 0.05,
+  "activation": "gelu",
+  "local_index_capacity": 32768,
+  "local_index_mode": "compositional",
+  "canonical_state_pooling": "masked_mean",
+  "structured_action_encoding": true,
+  "family_embedding_mode": "explicit",
+  "feature_semantic_mode": "feature_specific"
+}

@@ -1,0 +1,82 @@
+{
+  "claim_boundary": "The public-history comparison evaluates the complete pretrained decision system. The matched-random comparison is an attribution diagnostic and may be numerically sensitive to downstream adaptation.",
+  "data": {
+    "corpus_sha256": "9c6c1e96730e8b3417c06c4f43c0f9b7610ded0b3569d03ae07386dc0b0318d3",
+    "generated": true,
+    "input_sha256": {
+      "split_00": "e1e85904c4d9d4ba1b67ca77476a42c75119335f601ee87a52d1c4a33197f672",
+      "split_01": "f91580ac746e6f32f95d5605d9d2b1dee66df169daa2ed4a20e286fcdb870776",
+      "split_02": "cc93bb0a389f3f0f090d5bc64584d1d2a55dc9c759852e993e935d4529237488",
+      "split_03": "1e7d3df995d6b225f131cbbcbf9d60a6fa5fa4598bb12c2721258203a7202f12",
+      "split_04": "19c1b68f0c25358b8b8e07aff6e3a39053dc2c83216ca97707e1add3b6bde4cf"
+    },
+    "raw_results_redistributed": false
+  },
+  "metrics": {
+    "matched_random_regret_mean": 6.119210905431089,
+    "matched_random_regret_sample_sd": 0.7460156814216308,
+    "pretrained_regret_mean": 5.8834925562037785,
+    "pretrained_regret_sample_sd": 0.3359112208618897,
+    "pretrained_split_wins_vs_matched_random": 3,
+    "public_history_baseline_regret": 9.274,
+    "relative_reduction_vs_matched_random": 0.03852103692293063,
+    "relative_reduction_vs_public_history_baseline": 0.3655927802238754,
+    "total_splits": 5
+  },
+  "model": {
+    "dynamics_predictor_adapted": true,
+    "revision": "493786fda0855b72f61235068c62cc7b2a11fbec",
+    "state_encoder_frozen": true
+  },
+  "per_split": [
+    {
+      "matched_random_regret": 5.666789105599011,
+      "pretrained_regret": 5.709019872454996,
+      "pretrained_wins": false,
+      "relative_reduction_vs_matched_random": -0.007452327247234214,
+      "split": "base"
+    },
+    {
+      "matched_random_regret": 6.1630802385408465,
+      "pretrained_regret": 5.3760081496806595,
+      "pretrained_wins": true,
+      "relative_reduction_vs_matched_random": 0.12770758425928463,
+      "split": "s1"
+    },
+    {
+      "matched_random_regret": 5.128700885343487,
+      "pretrained_regret": 6.089312126621699,
+      "pretrained_wins": false,
+      "relative_reduction_vs_matched_random": -0.18730108515850352,
+      "split": "s2"
+    },
+    {
+      "matched_random_regret": 6.645898920065291,
+      "pretrained_regret": 6.183404215851385,
+      "pretrained_wins": true,
+      "relative_reduction_vs_matched_random": 0.0695909928478663,
+      "split": "s3"
+    },
+    {
+      "matched_random_regret": 6.99158537760681,
+      "pretrained_regret": 6.059718416410153,
+      "pretrained_wins": true,
+      "relative_reduction_vs_matched_random": 0.13328407090347683,
+      "split": "s4"
+    }
+  ],
+  "protocol": {
+    "candidate_plans": [
+      "regular",
+      "split"
+    ],
+    "continuation_policy": "no_further_orders",
+    "decision_horizon": 4,
+    "lookback_periods": 16,
+    "quantity_matched": true,
+    "world_splits": 5
+  },
+  "schema_version": 1,
+  "status": "complete",
+  "task": "short-horizon paired replenishment-plan choice"
+}

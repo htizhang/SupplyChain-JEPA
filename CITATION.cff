@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the SupplyChain-JEPA project."
+title: "SupplyChain-JEPA: A Predictive World Model for Partially Observed Supply Chains"
+type: software
+authors:
+  - name: "SupplyChain-JEPA contributors"
+version: 0.1.0
+repository-code: "https://github.com/htizhang/SupplyChain-JEPA"
+keywords:
+  - joint-embedding predictive architecture
+  - world model
+  - supply chain
+  - operations research

@@ -1,0 +1,68 @@
+{
+  "adjacent_boundary_diagnostic": {
+    "expected_direction": "negative",
+    "interpretation": "The fixed State readout is not a general Cargo2000 transfer method; its positive signal is limited to delayed reporting under joint shift.",
+    "observed_negative": true
+  },
+  "data": {
+    "csv_sha256": "da40666b12f4a5465a885f3df91d67cd7a1f20946a0ef07e62e9d35b3687984a",
+    "external_files_bundled": false,
+    "split_manifest_sha256": "47616c4806b101d51624abe0b2e07f8e9ea7cdabea3373d49a5aea9c0ac671de"
+  },
+  "evaluation_date": "2026-08-13",
+  "metrics": {
+    "adjacent_boundary": {
+      "baseline_auprc": 0.4965798413212018,
+      "matched_random_auprc_mean": 0.47848278412881473,
+      "positives": 468,
+      "pretrained_auprc": 0.4773906316576565,
+      "processes": 1696,
+      "relative_pretrained_vs_baseline": -0.0386427479868906,
+      "relative_pretrained_vs_matched_random": -0.0022825324283020088
+    },
+    "confirmation": {
+      "baseline_auprc": 0.38617012815654855,
+      "matched_random_auprc_mean": 0.3874903163248708,
+      "positives": 36,
+      "pretrained_auprc": 0.41219964825030353,
+      "processes": 126,
+      "relative_pretrained_vs_baseline": 0.06740428167764168,
+      "relative_pretrained_vs_matched_random": 0.06376761143294352
+    },
+    "development": {
+      "baseline_auprc": 0.3945156814671609,
+      "matched_random_auprc_mean": 0.412902187442333,
+      "positives": 67,
+      "pretrained_auprc": 0.4314584550017466,
+      "processes": 230,
+      "relative_pretrained_vs_baseline": 0.09364082410412577,
+      "relative_pretrained_vs_matched_random": 0.0449410735127318
+    }
+  },
+  "model": {
+    "repo_id": "htizhang/SupplyChain-JEPA",
+    "revision": "493786fda0855b72f61235068c62cc7b2a11fbec"
+  },
+  "protocol": {
+    "decision_checkpoint": "in_seg1",
+    "matched_random_seeds": [
+      101,
+      211,
+      307,
+      401,
+      503,
+      601,
+      701,
+      809,
+      907,
+      1009
+    ],
+    "rank_blend_alpha": 0.2,
+    "reporting_delay": "longest planned incoming leg: RCS then segment-1 DEP/RCF",
+    "target_label_budget": 64,
+    "transition": "in_rcs->in_seg1"
+  },
+  "schema_version": 1,
+  "status": "complete",
+  "task": "early SLA-risk ranking under delayed reports"
+}

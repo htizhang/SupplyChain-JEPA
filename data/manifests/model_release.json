@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "repository": "htizhang/SupplyChain-JEPA",
+  "revision": "493786fda0855b72f61235068c62cc7b2a11fbec",
+  "serialization": "safetensors",
+  "parameter_counts": {
+    "core": 73629696,
+    "online_state_encoder": 27987456,
+    "target_state_encoder": 27987456,
+    "state_predictor": 7255680,
+    "dynamics_predictor": 10399104,
+    "state_auxiliary": 2943285
+  },
+  "component_tensor_sha256": {
+    "core": "350028882e73453a7d0522cf679b1b78ba5cb39886716290b8b41015e1d11d1f",
+    "online_state_encoder": "c74d524c887d07b6c161dc754e5a6e1682ab16343a971bde618d999c57fbe0df",
+    "target_state_encoder": "f46fdabee27c49d689930d28c889a79e3335b75086de801b18b1a47d5111a679",
+    "state_predictor": "0559f42e154b9045e6ced130194b3ba4004e31aae08d4be770f4f8cab8e1ac17",
+    "dynamics_predictor": "1a94f7a990d1e4074c04f821afff7b3f14025e8412086575b4cf2b3202b8753c",
+    "state_auxiliary": "4ed6f6d37d820447d225517ac899f47d18f9efdca1c46d8e267e3916a9cf45fa"
+  }
+}

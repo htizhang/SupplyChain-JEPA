@@ -1,0 +1,58 @@
+{
+  "data": {
+    "external": true,
+    "files": {
+      "eval.parquet": "1b118840664280c6b88bffc84c80ee1f54c05d911e354b7599e5da10995e960e",
+      "train.parquet": "6706832db892bbae4969c19d87e07975d2543d2ba7d7d4756360654785de5a3d"
+    },
+    "name": "Dingdong-Inc/FreshRetailNet-50K"
+  },
+  "evaluation_date": "2026-08-13",
+  "metrics": {
+    "baseline_wape": 0.4169517579530725,
+    "jepa_system_wape": 0.3991166059452925,
+    "per_mask_seed": [
+      {
+        "baseline_wape": 0.41986601071730895,
+        "mask_seed": 11,
+        "pretrained_system_wape": 0.4023256419684963,
+        "relative_wape_improvement": 0.041776110237754835
+      },
+      {
+        "baseline_wape": 0.4147620221236232,
+        "mask_seed": 29,
+        "pretrained_system_wape": 0.396648251591199,
+        "relative_wape_improvement": 0.04367268352989472
+      },
+      {
+        "baseline_wape": 0.41623591348657396,
+        "mask_seed": 47,
+        "pretrained_system_wape": 0.3983855379697474,
+        "relative_wape_improvement": 0.04288523632500619
+      }
+    ],
+    "relative_wape_improvement": 0.04277509728064822,
+    "test_seed_count": 3,
+    "winning_test_seeds": 3
+  },
+  "model": {
+    "dynamics_predictor_used": false,
+    "repo_id": "htizhang/SupplyChain-JEPA",
+    "revision": "493786fda0855b72f61235068c62cc7b2a11fbec",
+    "state_encoder_frozen": true
+  },
+  "protocol": {
+    "adaptation_examples": 3000,
+    "baseline": "analog_day_knn",
+    "label_budget_percent": 5,
+    "state_encoder_frozen": true,
+    "test_mask_seeds": [
+      11,
+      29,
+      47
+    ]
+  },
+  "schema_version": 1,
+  "status": "complete",
+  "task": "controlled-stockout demand recovery"
+}
