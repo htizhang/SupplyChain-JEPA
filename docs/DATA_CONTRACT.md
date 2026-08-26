@@ -15,6 +15,11 @@ The raw episode schema and the model tensor-interface schema are separate contra
 must validate against the former before tensorization. The released Hugging Face bundle provides
 the latter together with the fitted vocabulary and normalization statistics.
 
+The packaged JSON Schema is the authoritative raw-record shape. The training loader deliberately
+stays lightweight and does not invoke JSON Schema validation itself, so adapters or corpus-build
+jobs should validate before handing records to the trainer. The project-authored generator in
+`examples/training/generate_tiny_corpus.py` demonstrates that boundary.
+
 ## Tensorized batch
 
 Tensorization produces context and target token fields, padding masks, numerical presence masks,
@@ -31,3 +36,7 @@ Structured actions contain supported numerical quantities and categorical action
 Paired branch records must identify a shared initial state and exogenous stream. Merely reusing a
 random seed is insufficient if simulator execution consumes randomness differently after the
 branch point.
+
+The trainer additionally verifies that every sibling branch has the same family, topology,
+decision time, complete pre-action prefix, and exogenous-stream identifier. Branch IDs remain
+batching metadata and are not model inputs.

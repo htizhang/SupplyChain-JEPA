@@ -13,6 +13,14 @@ PyTorch does not guarantee bitwise-identical results across every release, platf
 acceptance uses metric tolerances plus deterministic seeds rather than byte equality for trained
 downstream heads.
 
+## Training-chain check
+
+`scripts/run_training_smoke.py` validates generated canonical records and runs one continuous
+State-to-Dynamics chain with the small-model override. The corresponding test verifies that the
+fitted tensorizer and all State weights are unchanged during frozen Dynamics training while the
+Dynamics predictor itself updates. This is a control-flow and inheritance test; full model quality
+is evaluated through the pinned release and canonical application protocols.
+
 ## First-release gates
 
 - model tensors load strictly and representative outputs match the frozen release;

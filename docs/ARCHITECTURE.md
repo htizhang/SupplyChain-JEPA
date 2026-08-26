@@ -33,15 +33,17 @@ network neighborhoods, event suffixes, outages, or future windows. The online en
 visible context. The target encoder receives the corresponding target view. The State predictor
 maps context latents and query metadata to the stop-gradient target latents.
 
-Latent prediction is complemented by variance/covariance regularization and light numerical
-grounding so that the representation remains non-collapsed and preserves decision-relevant scale.
+Latent prediction is complemented by pooled-state prediction, semantic concept slots, and light
+numerical grounding. The implementation supports variance/covariance and SIGReg penalties, while
+the active release configuration disables those penalties and monitors representation geometry
+directly.
 
 ## Dynamics objective
 
 The Dynamics predictor receives latent state memory, structured candidate actions, and horizon.
 Paired simulator branches vary the action while holding exogenous randomness fixed. Objectives
-include future latent prediction, branch contrast, action-shuffle controls, short rollout
-consistency, and light flow/cost grounding.
+include future latent prediction, paired action-effect prediction, branch contrast,
+action-shuffle controls, and short-rollout consistency.
 
 Action conditioning is not a causal guarantee. The predictor is valid only for action semantics and
 support represented in its paired training trajectories.

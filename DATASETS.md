@@ -1,7 +1,8 @@
 # Dataset and simulator boundary
 
 No dataset is redistributed in this repository. Users must obtain each source from its original
-provider, review the current terms, and point the adapters or evaluators to a local data root.
+provider, review the current terms, and convert it to the documented canonical episode contract.
+Source-specific raw-data adapters are not included in this clean release.
 The manifests under `data/manifests/` record expected identities and integrity hashes where the
 original experiments sealed them.
 

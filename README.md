@@ -60,7 +60,18 @@ The reference implementation separates two objectives without training two unrel
 2. **Action-conditioned Dynamics post-training** starts from the same encoder, initially freezes
    it, and learns paired future differences under supported actions.
 
-See [Training](docs/TRAINING.md) and [Data contract](docs/DATA_CONTRACT.md).
+The detailed [Training guide](docs/TRAINING.md) documents corpus sampling, structured masks,
+objective equations and weights, EMA/final alignment, paired action controls, checkpoint contents,
+and the distinction between a training checkpoint and the published bundle. The
+[Data contract](docs/DATA_CONTRACT.md) defines canonical records.
+
+A bounded CPU chain generates four canonical records and runs both stages:
+
+```bash
+uv run --all-extras python scripts/run_training_smoke.py \
+  --work-dir /tmp/supplychain-jepa-smoke \
+  --updates 2
+```
 
 ## Canonical evaluations
 

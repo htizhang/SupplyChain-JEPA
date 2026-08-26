@@ -1,0 +1,80 @@
+{
+  "seed": 17,
+  "forbidden_downstream_sources": [
+    "FreshRetailNet-50K",
+    "Cargo2000",
+    "gym-invmgmt",
+    "gym_invmgmt",
+    "OR-Gym",
+    "or_gym",
+    "or-gymnax",
+    "downstream-application"
+  ],
+  "tensorization": {
+    "max_tokens": 64,
+    "target_window_steps": 2
+  },
+  "masking": {
+    "current_kinds": [
+      "contiguous_time",
+      "entity_group",
+      "network_neighborhood",
+      "event_suffix",
+      "outage"
+    ],
+    "min_time_span": 1,
+    "max_time_span": 2,
+    "max_entity_group": 2,
+    "neighborhood_radius": 1,
+    "future_horizons": [1, 2]
+  },
+  "state_training": {
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "betas": [0.9, 0.95],
+    "gradient_clip": 1.0,
+    "gradient_accumulation_steps": 1,
+    "warmup_fraction": 0.0,
+    "minimum_lr_ratio": 0.2,
+    "ema_momentum_start": 0.9,
+    "ema_momentum_end": 0.99,
+    "evaluation_samples": 2,
+    "evaluation_batch_size": 2,
+    "deployment_evaluation_samples": 2,
+    "minimum_family_rows_per_batch": 0,
+    "regularization_token_samples": 0,
+    "source_sampling_weights": {
+      "tiny_inventory": 1
+    },
+    "loss_weights": {
+      "variance": 0.0,
+      "covariance": 0.0,
+      "grounding": 0.1
+    },
+    "pooled_state_weight": 0.25,
+    "canonical_prediction": {
+      "enabled": true,
+      "weight": 0.2,
+      "warmup_updates": 0,
+      "propagate_encoder_gradients": true,
+      "hidden_multiplier": 1,
+      "dropout": 0.0,
+      "absolute_weight": 0.25,
+      "centered_mse_weight": 0.6,
+      "centered_cosine_weight": 0.15,
+      "variance_floor": 0.001,
+      "cosine_norm_floor": 0.000001
+    },
+    "deployment_encoder_source": "online",
+    "finalization_updates": 1,
+    "finalization_learning_rate": 0.0005,
+    "anti_collapse": {
+      "method": "none",
+      "projection": "identity"
+    },
+    "semantic_concept_slots": {
+      "enabled": false,
+      "weight": 0.0
+    }
+  }
+}
