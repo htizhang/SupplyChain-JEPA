@@ -1,0 +1,16 @@
+{
+  "output_dir": "/path/to/canonical-corpus",
+  "validate": true,
+  "sources": {
+    "m5": {"raw_root": "/path/to/raw/m5"},
+    "bpi2019": {"raw_root": "/path/to/raw/bpi2019"},
+    "lade": {"raw_root": "/path/to/raw/lade"},
+    "olist": {"raw_root": "/path/to/raw/olist"},
+    "planned_actual_routes": {"raw_root": "/path/to/raw/planned-actual-routes"},
+    "stockpyl": {"source_root": "/path/to/checkouts/stockpyl", "worlds": 512},
+    "supplynetpy": {"source_root": "/path/to/checkouts/supplynetpy", "worlds": 384},
+    "mabim": {"source_root": "/path/to/checkouts/mabim", "worlds": 256},
+    "isomorph": {"source_root": "/path/to/checkouts/isomorph", "worlds": 256},
+    "milestone_flow": {"worlds": 128}
+  }
+}

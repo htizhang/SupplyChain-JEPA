@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "manifest_type": "supplychain-jepa.source-pins",
+  "simulators": {
+    "stockpyl": {
+      "repository": "https://github.com/LarrySnyder/stockpyl",
+      "revision": "097d99e2c0cd469465933f1aec3608796177010d",
+      "license": "MIT"
+    },
+    "supplynetpy": {
+      "repository": "https://github.com/SupplyChainSimulation/SupplyNetPy",
+      "revision": "00c23633d5ae92d9437032f27789f298f73f86cf",
+      "license": "MIT"
+    },
+    "mabim": {
+      "repository": "https://github.com/VictorYXL/ReplenishmentEnv",
+      "revision": "e667565615461ecd4102a60ad1ecd6b772e357d6",
+      "license": "Apache-2.0 code; bundled data is not used"
+    },
+    "isomorph": {
+      "repository": "https://github.com/tuhinsahai/ISOMORPH",
+      "revision": "1316f44b24678c8f2d32d10534118330eb02d194",
+      "license": "MIT"
+    },
+    "milestone_flow": {
+      "repository": "project-authored",
+      "revision": "release-adapters-v1",
+      "license": "repository terms"
+    }
+  }
+}

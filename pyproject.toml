@@ -22,6 +22,19 @@ train = [
   "jsonschema>=4.23,<5",
   "pyyaml>=6,<7",
 ]
+adapters = [
+  "jsonpickle>=3,<5",
+  "jsonschema>=4.23,<5",
+  "matplotlib>=3.8,<4",
+  "networkx>=3.2,<4",
+  "openpyxl>=3.1,<4",
+  "pandas>=2.2,<4",
+  "pyyaml>=6,<7",
+  "scipy>=1.13,<2",
+  "simpy>=4.1,<5",
+  "tabulate>=0.9,<1",
+  "tqdm>=4.66,<5",
+]
 eval = [
   "joblib>=1.4,<2",
   "pandas>=2.2,<4",
@@ -36,8 +49,15 @@ dev = [
   "ruff>=0.11,<1",
 ]
 all = [
+  "jsonpickle>=3,<5",
   "jsonschema>=4.23,<5",
   "pyyaml>=6,<7",
+  "matplotlib>=3.8,<4",
+  "networkx>=3.2,<4",
+  "openpyxl>=3.1,<4",
+  "simpy>=4.1,<5",
+  "tabulate>=0.9,<1",
+  "tqdm>=4.66,<5",
   "joblib>=1.4,<2",
   "pandas>=2.2,<4",
   "pyarrow>=17,<24",

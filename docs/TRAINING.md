@@ -38,9 +38,10 @@ encoder receives topology, observations, and recorded actions. The target encode
 state. A legally unobserved target is never copied into context.
 
 The loader accepts canonical JSONL directly, a JSON manifest that declares JSONL paths, or a
-directory containing such artifacts. Source-specific downloaders and raw-to-canonical adapters
-are intentionally outside this release repository. The files under `data/manifests/` document the
-training lineage; they are not raw-data download scripts or runnable corpus manifests.
+directory containing such artifacts. All ten raw-to-canonical converters are available under
+`supplychain_jepa.adapters` and documented in [Data adapters](DATA_ADAPTERS.md). Third-party raw
+data remains outside the repository and under its original terms. The files under
+`data/manifests/` document the released training lineage.
 
 ### Train-only tensor fitting
 

@@ -63,7 +63,9 @@ The reference implementation separates two objectives without training two unrel
 The detailed [Training guide](docs/TRAINING.md) documents corpus sampling, structured masks,
 objective equations and weights, EMA/final alignment, paired action controls, checkpoint contents,
 and the distinction between a training checkpoint and the published bundle. The
-[Data contract](docs/DATA_CONTRACT.md) defines canonical records.
+[Data contract](docs/DATA_CONTRACT.md) defines canonical records, while
+[Data adapters](docs/DATA_ADAPTERS.md) documents and exposes converters for all ten real and
+simulated pretraining sources.
 
 A bounded CPU chain generates four canonical records and runs both stages:
 

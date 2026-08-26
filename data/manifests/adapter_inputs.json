@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "manifest_type": "supplychain-jepa.adapter-inputs",
+  "observational": {
+    "m5": {
+      "source": "https://www.kaggle.com/competitions/m5-forecasting-accuracy",
+      "required_files": ["m5-forecasting-accuracy.zip"],
+      "archive_members": ["calendar.csv", "sales_train_validation.csv"],
+      "license": "upstream competition terms; no redistribution"
+    },
+    "bpi2019": {
+      "source": "https://data.4tu.nl/articles/dataset/BPI_Challenge_2019/12715853/1",
+      "required_files": ["BPIChallenge2019CSV.zip"],
+      "archive_members": ["BPI_Challenge_2019.csv"],
+      "license": "CC BY 4.0"
+    },
+    "lade": {
+      "source": "https://huggingface.co/datasets/Cainiao-AI/LaDe",
+      "required_files": ["delivery_jl.csv"],
+      "license": "use the stricter non-commercial interpretation pending metadata resolution"
+    },
+    "olist": {
+      "source": "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce",
+      "required_files": ["olist.zip"],
+      "archive_members": [
+        "olist_orders_dataset.csv",
+        "olist_order_items_dataset.csv",
+        "olist_products_dataset.csv",
+        "olist_sellers_dataset.csv"
+      ],
+      "license": "upstream dataset terms; no redistribution"
+    },
+    "planned_actual_routes": {
+      "source": "https://data.mendeley.com/datasets/kkwgfvmtxn/1",
+      "required_files": ["last-mile-route-deviations-v1.zip"],
+      "archive_members": [
+        "Last-mile delivery route deviations dataset planned vs. actual routes/routes_performance.xlsx"
+      ],
+      "license": "CC BY 4.0"
+    }
+  },
+  "simulators": "../../configs/source_pins.json"
+}

@@ -1,8 +1,9 @@
 # Dataset and simulator boundary
 
 No dataset is redistributed in this repository. Users must obtain each source from its original
-provider, review the current terms, and convert it to the documented canonical episode contract.
-Source-specific raw-data adapters are not included in this clean release.
+provider and review the current terms. Source-specific converters are included under
+`supplychain_jepa.adapters`; [Data adapters](docs/DATA_ADAPTERS.md) documents their required local
+inputs and canonical mappings.
 The manifests under `data/manifests/` record expected identities and integrity hashes where the
 original experiments sealed them.
 
