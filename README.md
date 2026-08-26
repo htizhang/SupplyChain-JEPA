@@ -67,6 +67,40 @@ and the distinction between a training checkpoint and the published bundle. The
 [Data adapters](docs/DATA_ADAPTERS.md) documents and exposes converters for all ten real and
 simulated pretraining sources.
 
+### Data adapters
+
+The sources are not flattened into one artificial table. Each adapter preserves the source's
+entities, topology, timing, observation status, events, and actions, then emits the same canonical
+episode format consumed by the shared tensorizer:
+
+```text
+raw dataset or pinned simulator -> source adapter -> canonical episode JSONL
+    -> schema validation -> train-only tensorizer -> entity / event / action tokens
+```
+
+| Source group | Included sources | Training eligibility |
+|---|---|---|
+| Recorded operational histories | M5, BPI Challenge 2019, LaDe, Olist, planned-versus-actual routes | State JEPA only |
+| State-only simulators | SupplyNetPy, ISOMORPH, MilestoneFlow | State JEPA only |
+| Intervention-capable simulators | Stockpyl, MABIM | State JEPA and paired Dynamics JEPA |
+
+List the adapters, fetch the four pinned external simulator revisions, or build all ten configured
+sources as follows:
+
+```bash
+uv run --extra adapters python -m supplychain_jepa.adapters list
+uv run python scripts/fetch_simulator_sources.py --root /path/to/simulator-checkouts
+
+cp configs/adapters.example.json /path/to/adapters.json
+# Edit the local raw-data and simulator paths in /path/to/adapters.json.
+uv run --extra adapters python -m supplychain_jepa.adapters build \
+  --config /path/to/adapters.json
+```
+
+Raw datasets remain under their original terms and must be acquired separately. See
+[Data adapters](docs/DATA_ADAPTERS.md) for required files, field-level mappings, split rules,
+missingness semantics, and Dynamics pairing requirements.
+
 A bounded CPU chain generates four canonical records and runs both stages:
 
 ```bash
