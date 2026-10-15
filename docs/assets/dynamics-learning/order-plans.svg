@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480" role="img" aria-labelledby="title desc">
+  <title id="title">Two order plans from one shared history</title>
+  <desc id="desc">Step chart of the order instruction per location per period in an illustrative Stockpyl world whose mean-demand parameter is 20. Periods 0 to 9 share an instruction of 20 units and form the visible history. At period 10 the plans split: plan A orders 9 units and plan B orders 33 units in every later period. For a four-period horizon, the orders of periods 10 to 13 are the action input, and the simulated record at period 14 is the training target.</desc>
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .card { fill: #fcfcfb; stroke: #0b0b0b; stroke-opacity: 0.10; }
+    .t1 { fill: #0b0b0b; }
+    .t2 { fill: #52514e; }
+    .title { font-size: 20px; font-weight: 600; }
+    .sub { font-size: 13.5px; }
+    .head { font-size: 12.5px; font-weight: 600; }
+    .small { font-size: 12px; }
+    .tick { font-size: 12px; font-variant-numeric: tabular-nums; }
+    .strong { font-weight: 600; }
+    .label { font-size: 12.5px; font-weight: 600; }
+    .note { font-size: 12px; }
+    .grid { stroke: #e1e0d9; stroke-width: 1; }
+    .axis { stroke: #c3c2b7; stroke-width: 1; }
+    .rule { fill: none; stroke: #898781; stroke-width: 1; }
+    .wash1 { fill: #0b0b0b; fill-opacity: 0.035; }
+    .wash2 { fill: #0b0b0b; fill-opacity: 0.07; }
+    .wash3 { fill: #0b0b0b; fill-opacity: 0.13; }
+    .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+    .sp { stroke: #52514e; }
+    .sa { stroke: #2a78d6; }
+    .sb { stroke: #eb6834; }
+    .fp { fill: #0b0b0b; }
+    .fa { fill: #2a78d6; }
+    .fb { fill: #eb6834; }
+    .ring { stroke: #fcfcfb; stroke-width: 2; }
+    @media (prefers-color-scheme: dark) {
+      .card { fill: #1a1a19; stroke: #ffffff; stroke-opacity: 0.10; }
+      .t1 { fill: #ffffff; }
+      .t2 { fill: #c3c2b7; }
+      .grid { stroke: #2c2c2a; }
+      .axis { stroke: #383835; }
+      .wash1 { fill: #ffffff; fill-opacity: 0.035; }
+      .wash2 { fill: #ffffff; fill-opacity: 0.07; }
+      .wash3 { fill: #ffffff; fill-opacity: 0.13; }
+      .sp { stroke: #c3c2b7; }
+      .sa { stroke: #3987e5; }
+      .sb { stroke: #d95926; }
+      .fp { fill: #ffffff; }
+      .fa { fill: #3987e5; }
+      .fb { fill: #d95926; }
+      .ring { stroke: #1a1a19; }
+    }
+  </style>
+
+  <rect class="card" x="0.5" y="0.5" width="959" height="479" rx="12"/>
+
+  <text class="t1 title" x="32" y="40">Two order plans from one shared history</text>
+  <text class="t2 sub" x="32" y="63">Illustrative Stockpyl world with a mean-demand parameter of 20. In any period, every location receives the same order instruction.</text>
+
+  <g aria-hidden="true">
+    <line class="line sp" x1="32" y1="92" x2="56" y2="92"/>
+    <text class="t2 small" x="64" y="96">Shared plan before the split</text>
+    <line class="line sa" x1="248" y1="92" x2="272" y2="92"/>
+    <text class="t2 small" x="280" y="96">A: low plan</text>
+    <line class="line sb" x1="372" y1="92" x2="396" y2="92"/>
+    <text class="t2 small" x="404" y="96">B: high plan</text>
+  </g>
+
+  <g aria-hidden="true">
+    <rect class="wash1" x="93.0" y="156" width="453.0" height="220" rx="3"/>
+    <rect class="wash2" x="548.0" y="156" width="180.0" height="220" rx="3"/>
+    <rect class="wash3" x="730.0" y="156" width="43.5" height="220" rx="3"/>
+    <text class="t1 head" x="319.5" y="124" text-anchor="middle">Visible history</text>
+    <text class="t2 small" x="319.5" y="139" text-anchor="middle">periods 0 to 9, summarized as z</text>
+    <path class="rule" d="M95.0,150 V146 H544.0 V150"/>
+    <text class="t1 head" x="638.0" y="124" text-anchor="middle">Order input to Dynamics</text>
+    <text class="t2 small" x="638.0" y="139" text-anchor="middle">periods 10 to 13</text>
+    <path class="rule" d="M550.0,150 V146 H726.0 V150"/>
+    <text class="t1 head" x="751.75" y="124" text-anchor="middle">Target</text>
+    <text class="t2 small" x="751.75" y="139" text-anchor="middle">period 14</text>
+    <path class="rule" d="M732.0,150 V146 H771.5 V150"/>
+    <line class="axis" x1="92" y1="376.0" x2="820" y2="376.0"/>
+    <text class="t2 tick" x="82" y="380.0" text-anchor="end">0</text>
+    <line class="grid" x1="92" y1="321.0" x2="820" y2="321.0"/>
+    <text class="t2 tick" x="82" y="325.0" text-anchor="end">10</text>
+    <line class="grid" x1="92" y1="266.0" x2="820" y2="266.0"/>
+    <text class="t2 tick" x="82" y="270.0" text-anchor="end">20</text>
+    <line class="grid" x1="92" y1="211.0" x2="820" y2="211.0"/>
+    <text class="t2 tick" x="82" y="215.0" text-anchor="end">30</text>
+    <line class="grid" x1="92" y1="156.0" x2="820" y2="156.0"/>
+    <text class="t2 tick" x="82" y="160.0" text-anchor="end">40</text>
+    <text class="t2 tick" x="114.75" y="396" text-anchor="middle">0</text>
+    <text class="t2 tick" x="160.25" y="396" text-anchor="middle">1</text>
+    <text class="t2 tick" x="205.75" y="396" text-anchor="middle">2</text>
+    <text class="t2 tick" x="251.25" y="396" text-anchor="middle">3</text>
+    <text class="t2 tick" x="296.75" y="396" text-anchor="middle">4</text>
+    <text class="t2 tick" x="342.25" y="396" text-anchor="middle">5</text>
+    <text class="t2 tick" x="387.75" y="396" text-anchor="middle">6</text>
+    <text class="t2 tick" x="433.25" y="396" text-anchor="middle">7</text>
+    <text class="t2 tick" x="478.75" y="396" text-anchor="middle">8</text>
+    <text class="t2 tick" x="524.25" y="396" text-anchor="middle">9</text>
+    <text class="t1 tick strong" x="569.75" y="396" text-anchor="middle">10</text>
+    <text class="t2 tick" x="615.25" y="396" text-anchor="middle">11</text>
+    <text class="t2 tick" x="660.75" y="396" text-anchor="middle">12</text>
+    <text class="t2 tick" x="706.25" y="396" text-anchor="middle">13</text>
+    <text class="t1 tick strong" x="751.75" y="396" text-anchor="middle">14</text>
+    <text class="t2 tick" x="797.25" y="396" text-anchor="middle">15</text>
+    <text class="t2 small" x="456.0" y="420" text-anchor="middle">Simulation period (numbered from 0)</text>
+    <text class="t2 small" transform="translate(34 266.0) rotate(-90)" text-anchor="middle">Units ordered per location per period</text>
+
+    <path class="line sp" d="M92.0,266.0 H547.0"/>
+    <path class="line sa" d="M547.0,266.0 V326.5 H820.0"/>
+    <path class="line sb" d="M547.0,266.0 V194.5 H820.0"/>
+
+    <text class="t2 small" x="319.5" y="256.0" text-anchor="middle">Shared plan: 20 units</text>
+    <text class="t2 small" x="557.0" y="185.5">× 1.65</text>
+    <text class="t2 small" x="557.0" y="345.5">× 0.45</text>
+    <text class="t2 small" x="537.0" y="284.0" text-anchor="end">plans split</text>
+
+    <circle class="fp ring" cx="547.0" cy="266.0" r="4.5"/>
+    <circle class="fb ring" cx="820.0" cy="194.5" r="4.5"/>
+    <circle class="fa ring" cx="820.0" cy="326.5" r="4.5"/>
+
+    <text class="t1 label" x="834" y="191.5">B: high plan</text>
+    <text class="t2 small" x="834" y="207.5">33 units</text>
+    <text class="t1 label" x="834" y="323.5">A: low plan</text>
+    <text class="t2 small" x="834" y="339.5">9 units</text>
+  </g>
+
+  <text class="t2 note" x="32" y="448">Order instructions follow the adapter rule (9 = 0.45 × 20 and 33 = 1.65 × 20). Customer demand still varies around the mean from period to period.</text>
+  <text class="t2 note" x="32" y="465">Illustration of the generating rule, not an experimental result. With default settings the plans split at period 10 of a 32-period episode.</text>
+</svg>

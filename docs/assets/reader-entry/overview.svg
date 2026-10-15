@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-labelledby="title desc">
+  <title id="title">From partial records to predicted futures</title>
+  <desc id="desc">Illustrative schematic. Left: an operating history in which some values are hidden, some reports are delayed, and stockout-day sales are censored. Middle: an encoder condenses the visible records into one learned latent operational state. Right: from that state, the model predicts the future under two candidate plans at horizons of one, two, four, and eight periods. Small task readouts turn the state, or its predicted futures, into a demand estimate, a risk score, or a plan cost.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A37"/>
+      <stop offset="1" stop-color="#16384A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D4659"/>
+      <stop offset="1" stop-color="#183D4E"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#2F8F95"/>
+      <stop offset="1" stop-color="#7FD8C8"/>
+    </linearGradient>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#3A3A2A" fill-opacity="0.35"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#F2B04B" stroke-width="2.2"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9FC3CF"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .heading { font-size: 22px; font-weight: 600; fill: #FFFFFF; }
+      .step { font-size: 13px; font-weight: 700; fill: #7FD8C8; letter-spacing: 1.2px; }
+      .title { font-size: 18px; font-weight: 600; fill: #FFFFFF; }
+      .label { font-size: 12.5px; fill: #A9C8D3; }
+      .small { font-size: 12px; fill: #A9C8D3; }
+      .caption { font-size: 14px; fill: #D5E6EC; }
+      .footer { font-size: 15px; fill: #D5E6EC; }
+      .cellq { font-size: 15px; font-weight: 700; fill: #F08A78; }
+      .cellz { font-size: 14px; font-weight: 700; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="440" rx="18" fill="url(#bg)"/>
+  <text x="36" y="46" class="heading">From partial records to predicted futures</text>
+  <text x="1164" y="46" class="small" text-anchor="end">Illustrative schematic</text>
+
+  <!-- Panel 1: incomplete operating history -->
+  <rect x="36" y="70" width="336" height="306" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="56" y="100" class="step">1  RECORDS</text>
+  <text x="56" y="124" class="title">History arrives incomplete</text>
+  <g class="label" text-anchor="middle">
+    <text x="126" y="150">Sales</text>
+    <text x="190" y="150">Stock</text>
+    <text x="254" y="150">Transit</text>
+    <text x="318" y="150">Reports</text>
+  </g>
+  <g class="small">
+    <text x="58" y="175">t1</text>
+    <text x="58" y="205">t2</text>
+    <text x="58" y="235">t3</text>
+    <text x="58" y="265">t4</text>
+    <text x="58" y="295">t5</text>
+    <text x="58" y="325">t6</text>
+  </g>
+  <!-- observed cells: tile with an inner value bar -->
+  <g fill="#2B6578">
+    <rect x="96" y="158" width="60" height="26" rx="5"/>
+    <rect x="160" y="158" width="60" height="26" rx="5"/>
+    <rect x="224" y="158" width="60" height="26" rx="5"/>
+    <rect x="288" y="158" width="60" height="26" rx="5"/>
+    <rect x="96" y="188" width="60" height="26" rx="5"/>
+    <rect x="160" y="188" width="60" height="26" rx="5"/>
+    <rect x="224" y="188" width="60" height="26" rx="5"/>
+    <rect x="288" y="188" width="60" height="26" rx="5"/>
+    <rect x="96" y="218" width="60" height="26" rx="5"/>
+    <rect x="224" y="218" width="60" height="26" rx="5"/>
+    <rect x="96" y="248" width="60" height="26" rx="5"/>
+    <rect x="224" y="248" width="60" height="26" rx="5"/>
+    <rect x="96" y="278" width="60" height="26" rx="5"/>
+    <rect x="160" y="278" width="60" height="26" rx="5"/>
+    <rect x="96" y="308" width="60" height="26" rx="5"/>
+    <rect x="160" y="308" width="60" height="26" rx="5"/>
+  </g>
+  <g fill="#7FD8C8" fill-opacity="0.85">
+    <rect x="104" y="168" width="34" height="6" rx="3"/>
+    <rect x="168" y="168" width="40" height="6" rx="3"/>
+    <rect x="232" y="168" width="22" height="6" rx="3"/>
+    <rect x="296" y="168" width="44" height="6" rx="3"/>
+    <rect x="104" y="198" width="40" height="6" rx="3"/>
+    <rect x="168" y="198" width="30" height="6" rx="3"/>
+    <rect x="232" y="198" width="28" height="6" rx="3"/>
+    <rect x="296" y="198" width="44" height="6" rx="3"/>
+    <rect x="104" y="228" width="44" height="6" rx="3"/>
+    <rect x="232" y="228" width="34" height="6" rx="3"/>
+    <rect x="232" y="258" width="38" height="6" rx="3"/>
+    <rect x="104" y="288" width="30" height="6" rx="3"/>
+    <rect x="168" y="288" width="44" height="6" rx="3"/>
+    <rect x="104" y="318" width="36" height="6" rx="3"/>
+    <rect x="168" y="318" width="38" height="6" rx="3"/>
+  </g>
+  <!-- censored sales on a stockout day -->
+  <text x="126" y="266" class="cellz" text-anchor="middle">0</text>
+  <circle cx="146" cy="255" r="4" fill="#F08A78"/>
+  <!-- hidden values -->
+  <g fill="none" stroke="#F08A78" stroke-width="1.5" stroke-dasharray="4 3">
+    <rect x="160.75" y="218.75" width="58.5" height="24.5" rx="5"/>
+    <rect x="160.75" y="248.75" width="58.5" height="24.5" rx="5"/>
+    <rect x="288.75" y="278.75" width="58.5" height="24.5" rx="5"/>
+    <rect x="224.75" y="308.75" width="58.5" height="24.5" rx="5"/>
+    <rect x="288.75" y="308.75" width="58.5" height="24.5" rx="5"/>
+  </g>
+  <g class="cellq" text-anchor="middle">
+    <text x="190" y="237">?</text>
+    <text x="190" y="267">?</text>
+    <text x="318" y="297">?</text>
+    <text x="254" y="327">?</text>
+    <text x="318" y="327">?</text>
+  </g>
+  <!-- delayed reports -->
+  <g fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.2">
+    <rect x="288.6" y="218.6" width="58.8" height="24.8" rx="5"/>
+    <rect x="288.6" y="248.6" width="58.8" height="24.8" rx="5"/>
+    <rect x="224.6" y="278.6" width="58.8" height="24.8" rx="5"/>
+  </g>
+  <!-- legend -->
+  <g class="small">
+    <rect x="58" y="349" width="14" height="12" rx="3" fill="#2B6578"/>
+    <text x="78" y="359">observed</text>
+    <rect x="142" y="349" width="14" height="12" rx="3" fill="url(#hatch)" stroke="#F2B04B"/>
+    <text x="162" y="359">delayed</text>
+    <rect x="220" y="349" width="14" height="12" rx="3" fill="none" stroke="#F08A78" stroke-dasharray="3 2"/>
+    <text x="240" y="359">hidden</text>
+    <circle cx="296" cy="355" r="4" fill="#F08A78"/>
+    <text x="305" y="359">censored</text>
+  </g>
+
+  <path d="M380 223 L424 223" stroke="#9FC3CF" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Panel 2: shared latent operational state -->
+  <rect x="432" y="70" width="336" height="306" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="452" y="100" class="step">2  STATE</text>
+  <text x="452" y="124" class="title">One learned operating state</text>
+  <g fill="none" stroke="#5E8D9C" stroke-width="1.6">
+    <path d="M452 168 C480 168, 490 205, 516 212"/>
+    <path d="M452 196 C478 196, 492 214, 516 220"/>
+    <path d="M452 224 C480 224, 494 226, 516 228"/>
+    <path d="M452 252 C478 252, 492 240, 516 236"/>
+    <path d="M452 280 C480 280, 490 250, 516 244"/>
+  </g>
+  <rect x="516" y="176" width="92" height="104" rx="12" fill="#244F63" stroke="#7FD8C8" stroke-width="1.5"/>
+  <text x="562" y="223" class="caption" text-anchor="middle" font-weight="600">Encoder</text>
+  <text x="562" y="243" class="small" text-anchor="middle">reads what</text>
+  <text x="562" y="258" class="small" text-anchor="middle">is visible</text>
+  <path d="M612 228 L636 228" stroke="#9FC3CF" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <g fill="url(#bar)">
+    <rect x="644" y="206" width="7" height="74" rx="2"/>
+    <rect x="654" y="236" width="7" height="44" rx="2"/>
+    <rect x="664" y="186" width="7" height="94" rx="2"/>
+    <rect x="674" y="222" width="7" height="58" rx="2"/>
+    <rect x="684" y="248" width="7" height="32" rx="2"/>
+    <rect x="694" y="198" width="7" height="82" rx="2"/>
+    <rect x="704" y="230" width="7" height="50" rx="2"/>
+    <rect x="714" y="212" width="7" height="68" rx="2"/>
+    <rect x="724" y="252" width="7" height="28" rx="2"/>
+    <rect x="734" y="194" width="7" height="86" rx="2"/>
+    <rect x="744" y="228" width="7" height="52" rx="2"/>
+  </g>
+  <line x1="640" y1="282" x2="755" y2="282" stroke="#5E8D9C" stroke-width="1"/>
+  <text x="698" y="174" class="caption" text-anchor="middle" font-style="italic" font-weight="600">z</text>
+  <text x="698" y="300" class="small" text-anchor="middle">latent state</text>
+  <text x="452" y="340" class="caption">A learned summary of current conditions,</text>
+  <text x="452" y="359" class="caption">including ones not directly observed</text>
+
+  <path d="M776 223 L820 223" stroke="#9FC3CF" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Panel 3: futures under candidate plans -->
+  <rect x="828" y="70" width="336" height="306" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="848" y="100" class="step">3  PREDICTIONS</text>
+  <text x="848" y="124" class="title">Futures under each plan</text>
+  <line x1="852" y1="300" x2="1144" y2="300" stroke="#5E8D9C" stroke-width="1.2"/>
+  <line x1="938" y1="154" x2="938" y2="300" stroke="#5E8D9C" stroke-width="1" stroke-dasharray="3 4"/>
+  <text x="938" y="146" class="small" text-anchor="middle">now</text>
+  <path d="M852 236 C868 226, 880 246, 896 236 S922 226, 938 230" fill="none" stroke="#D5E6EC" stroke-width="2.4"/>
+  <text x="854" y="214" class="small">history</text>
+  <path d="M938 230 C970 228, 1000 196, 1040 186 S1100 170, 1114 164" fill="none" stroke="#F2B04B" stroke-width="2.6"/>
+  <path d="M938 230 C972 236, 1004 256, 1044 262 S1100 268, 1114 272" fill="none" stroke="#7FD8C8" stroke-width="2.6"/>
+  <g fill="#F2B04B">
+    <circle cx="960" cy="226" r="4"/>
+    <circle cx="982" cy="216" r="4"/>
+    <circle cx="1026" cy="191" r="4"/>
+    <circle cx="1114" cy="164" r="4"/>
+  </g>
+  <g fill="#7FD8C8">
+    <circle cx="960" cy="234" r="4"/>
+    <circle cx="982" cy="242" r="4"/>
+    <circle cx="1026" cy="259" r="4"/>
+    <circle cx="1114" cy="272" r="4"/>
+  </g>
+  <text x="1110" y="150" class="label" text-anchor="end" style="fill:#F2B04B">Plan B</text>
+  <text x="1110" y="292" class="label" text-anchor="end" style="fill:#7FD8C8">Plan A</text>
+  <g class="small" text-anchor="middle">
+    <line x1="960" y1="300" x2="960" y2="306" stroke="#9FC3CF"/>
+    <line x1="982" y1="300" x2="982" y2="306" stroke="#9FC3CF"/>
+    <line x1="1026" y1="300" x2="1026" y2="306" stroke="#9FC3CF"/>
+    <line x1="1114" y1="300" x2="1114" y2="306" stroke="#9FC3CF"/>
+    <text x="960" y="318">1</text>
+    <text x="982" y="318">2</text>
+    <text x="1026" y="318">4</text>
+    <text x="1114" y="318">8</text>
+  </g>
+  <text x="848" y="340" class="caption">Predicted at horizons of 1, 2, 4, and 8</text>
+  <text x="848" y="359" class="caption">periods for each candidate plan</text>
+
+  <text x="600" y="414" class="footer" text-anchor="middle">Small task readouts turn the state, or its predicted futures, into a demand estimate, a risk score, or a plan cost.</text>
+</svg>

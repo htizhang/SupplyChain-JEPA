@@ -40,3 +40,10 @@ results/raw/
 results/cache/
 evaluations/**/artifacts/
 evaluations/**/outputs/
+
+# graphify local state; graph.html, graph.json, and GRAPH_REPORT.md are the shareable outputs
+graphify-out/.graphify_*
+graphify-out/.needs_update
+graphify-out/cache/
+graphify-out/cost.json
+graphify-out/manifest.json

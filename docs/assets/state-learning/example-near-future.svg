@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="404" viewBox="0 0 960 404" role="img" aria-labelledby="title desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="title">Example 2: the near future</title>
+<desc id="desc">The same two-warehouse grid. The context stops at the end of day 6. Every record of both warehouses on days 7 and 8 is hidden and graded, and the order placed on day 7 is withheld from the context. The target view and target window again cover days 7 and 8.</desc>
+<defs>
+  <pattern id="hatch-amber" patternUnits="userSpaceOnUse" width="9" height="9" patternTransform="rotate(45)">
+    <rect width="9" height="9" fill="#fef3c7"/>
+    <line x1="0" y1="0" x2="0" y2="9" stroke="#f59e0b" stroke-width="3" opacity="0.30"/>
+  </pattern>
+  <pattern id="hatch-grey" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+    <rect width="8" height="8" fill="#f1f5f9"/>
+    <line x1="0" y1="0" x2="0" y2="8" stroke="#94a3b8" stroke-width="2" opacity="0.35"/>
+  </pattern>
+</defs>
+<rect x="1.0" y="1.0" width="958.0" height="402.0" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+<rect x="28.0" y="24.0" width="92.0" height="24.0" rx="12" fill="#1e3a8a" stroke="none" stroke-width="1.0"/>
+<text x="74.0" y="40.5" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">EXAMPLE 2</text>
+<text x="134.0" y="42.0" font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">The near future</text>
+<text x="28.0" y="74.0" font-size="15" font-weight="400" fill="#334155" text-anchor="start">What will both warehouses look like on days 7 and 8? Nothing after day 6 is visible, including the order placed on day 7.</text>
+<line x1="184.0" y1="112.0" x2="632.0" y2="112.0" stroke="#1e3a8a" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="184.0" y1="106.0" x2="184.0" y2="118.0" stroke="#1e3a8a" stroke-width="1.6" stroke-linecap="round"/>
+<text x="408.0" y="103.0" font-size="13.5" font-weight="600" fill="#1e3a8a" text-anchor="middle">context: everything visible through day 6</text>
+<line x1="632.0" y1="106.0" x2="632.0" y2="300.0" stroke="#1e3a8a" stroke-width="1.6" stroke-linecap="round"/>
+<rect x="640.0" y="92.0" width="148.0" height="22.0" rx="11" fill="#eef2ff" stroke="#1e3a8a" stroke-width="1.0"/>
+<text x="714.0" y="107.0" font-size="13" font-weight="600" fill="#1e3a8a" text-anchor="middle">now: end of day 6</text>
+<text x="170.0" y="142.0" font-size="13" font-weight="600" fill="#64748b" text-anchor="end">Day</text>
+<text x="214.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">1</text>
+<text x="290.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">2</text>
+<text x="366.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">3</text>
+<text x="442.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">4</text>
+<text x="518.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">5</text>
+<text x="594.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">6</text>
+<text x="670.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">7</text>
+<text x="746.0" y="142.0" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">8</text>
+<text x="822.0" y="142.0" font-size="14" font-weight="600" fill="#a3b1c6" text-anchor="middle">9</text>
+<text x="898.0" y="142.0" font-size="14" font-weight="600" fill="#a3b1c6" text-anchor="middle">10</text>
+<text x="170.0" y="181.0" font-size="14.5" font-weight="600" fill="#0f172a" text-anchor="end">Warehouse East</text>
+<text x="170.0" y="233.0" font-size="14.5" font-weight="600" fill="#0f172a" text-anchor="end">Warehouse West</text>
+<text x="170.0" y="279.0" font-size="14.5" font-weight="600" fill="#0f172a" text-anchor="end">Orders placed</text>
+<rect x="184.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="260.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="336.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="412.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="488.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="564.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="640.0" y="154.0" width="60.0" height="44.0" rx="7" fill="url(#hatch-amber)" stroke="#d97706" stroke-width="1.4"/>
+<text x="670.0" y="182.5" font-size="19" font-weight="700" fill="#92400e" text-anchor="middle">?</text>
+<rect x="716.0" y="154.0" width="60.0" height="44.0" rx="7" fill="url(#hatch-amber)" stroke="#d97706" stroke-width="1.4"/>
+<text x="746.0" y="182.5" font-size="19" font-weight="700" fill="#92400e" text-anchor="middle">?</text>
+<rect x="792.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#f8fafc" stroke="#e9eef5" stroke-width="1.0"/>
+<rect x="868.0" y="154.0" width="60.0" height="44.0" rx="7" fill="#f8fafc" stroke="#e9eef5" stroke-width="1.0"/>
+<rect x="184.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="260.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="336.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="412.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="488.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="564.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<rect x="640.0" y="206.0" width="60.0" height="44.0" rx="7" fill="url(#hatch-amber)" stroke="#d97706" stroke-width="1.4"/>
+<text x="670.0" y="234.5" font-size="19" font-weight="700" fill="#92400e" text-anchor="middle">?</text>
+<rect x="716.0" y="206.0" width="60.0" height="44.0" rx="7" fill="url(#hatch-amber)" stroke="#d97706" stroke-width="1.4"/>
+<text x="746.0" y="234.5" font-size="19" font-weight="700" fill="#92400e" text-anchor="middle">?</text>
+<rect x="792.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#f8fafc" stroke="#e9eef5" stroke-width="1.0"/>
+<rect x="868.0" y="206.0" width="60.0" height="44.0" rx="7" fill="#f8fafc" stroke="#e9eef5" stroke-width="1.0"/>
+<rect x="184.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#fbfcfe" stroke="#eef2f7" stroke-width="1.0"/>
+<rect x="260.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#fbfcfe" stroke="#eef2f7" stroke-width="1.0"/>
+<rect x="336.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#fbfcfe" stroke="#eef2f7" stroke-width="1.0"/>
+<rect x="412.0" y="258.0" width="60.0" height="32.0" rx="16.0" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<text x="442.0" y="278.5" font-size="13" font-weight="600" fill="#115e59" text-anchor="middle">order</text>
+<rect x="488.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#fbfcfe" stroke="#eef2f7" stroke-width="1.0"/>
+<rect x="564.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#fbfcfe" stroke="#eef2f7" stroke-width="1.0"/>
+<rect x="640.0" y="258.0" width="60.0" height="32.0" rx="16.0" fill="url(#hatch-grey)" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="670.0" y="278.5" font-size="13" font-weight="600" fill="#64748b" text-anchor="middle">order</text>
+<line x1="654.0" y1="274.0" x2="686.0" y2="274.0" stroke="#64748b" stroke-width="1.3" stroke-linecap="round"/>
+<rect x="716.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#fbfcfe" stroke="#eef2f7" stroke-width="1.0"/>
+<rect x="792.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#f8fafc" stroke="#e9eef5" stroke-width="1.0"/>
+<rect x="868.0" y="258.0" width="60.0" height="32.0" rx="7" fill="#f8fafc" stroke="#e9eef5" stroke-width="1.0"/>
+<rect x="636.0" y="149.0" width="144.0" height="106.0" rx="10" fill="none" stroke="#d97706" stroke-width="2.0" stroke-dasharray="7 5"/>
+<line x1="640.0" y1="306.0" x2="776.0" y2="306.0" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="640.0" y1="300.0" x2="640.0" y2="312.0" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="776.0" y1="300.0" x2="776.0" y2="312.0" stroke="#d97706" stroke-width="1.6" stroke-linecap="round"/>
+<text x="708.0" y="328.0" font-size="13.5" font-weight="600" fill="#92400e" text-anchor="middle">target window: days 7 and 8 (horizon 2)</text>
+<line x1="28.0" y1="350.0" x2="932.0" y2="350.0" stroke="#e2e8f0" stroke-width="1.0" stroke-linecap="round"/>
+<rect x="28.0" y="367.0" width="18.0" height="14.0" rx="4" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.2"/>
+<text x="54.0" y="378.0" font-size="13.5" font-weight="400" fill="#334155" text-anchor="start">visible context</text>
+<rect x="184.0" y="367.0" width="18.0" height="14.0" rx="4" fill="url(#hatch-amber)" stroke="#d97706" stroke-width="1.2"/>
+<text x="193.0" y="378.5" font-size="10.5" font-weight="700" fill="#92400e" text-anchor="middle">?</text>
+<text x="210.0" y="378.0" font-size="13.5" font-weight="400" fill="#334155" text-anchor="start">hidden and graded</text>
+<rect x="356.0" y="366.0" width="18.0" height="16.0" rx="4" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="4 3"/>
+<text x="382.0" y="378.0" font-size="13.5" font-weight="400" fill="#334155" text-anchor="start">target view</text>
+<rect x="488.0" y="367.0" width="18.0" height="14.0" rx="7" fill="url(#hatch-grey)" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="514.0" y="378.0" font-size="13.5" font-weight="400" fill="#334155" text-anchor="start">later order withheld</text>
+<rect x="678.0" y="367.0" width="18.0" height="14.0" rx="4" fill="#f8fafc" stroke="#d5dde8" stroke-width="1.0"/>
+<text x="704.0" y="378.0" font-size="13.5" font-weight="400" fill="#334155" text-anchor="start">outside this question</text>
+</svg>

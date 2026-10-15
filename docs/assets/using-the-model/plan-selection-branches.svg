@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 428" width="1000" height="428" role="img" aria-labelledby="title desc">
+  <title id="title">Two plans, evaluated on the same futures</title>
+  <desc id="desc">Illustrative schematic of one replenishment decision world. Left: 16 periods of public history in three rows. The global record of inventory, backlog, demand, sales, and pipeline is reported every period; the primary and secondary supplier rows contain delayed capacity reports. A fourth row stands for the suppliers' reliability regimes, which are never observed. Right: from the decision point, a regular plan that orders the full quantity from the primary supplier and a split plan that divides the same quantity between both suppliers each run for four periods on the same simulated futures. Their average costs are 33.4 and 31.0 units, so choosing split has zero regret and choosing regular has regret 2.4. Values are illustrative.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A37"/>
+      <stop offset="1" stop-color="#16384A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D4659"/>
+      <stop offset="1" stop-color="#183D4E"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#2F8F95"/>
+      <stop offset="1" stop-color="#7FD8C8"/>
+    </linearGradient>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#3A3A2A" fill-opacity="0.35"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#F2B04B" stroke-width="2.2"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9FC3CF"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .heading { font-size: 21px; font-weight: 600; fill: #FFFFFF; }
+      .step { font-size: 12.5px; font-weight: 700; fill: #7FD8C8; letter-spacing: 1.2px; }
+      .title { font-size: 17px; font-weight: 600; fill: #FFFFFF; }
+      .label { font-size: 13px; fill: #D5E6EC; }
+      .small { font-size: 12px; fill: #A9C8D3; }
+      .tiny { font-size: 11px; fill: #A9C8D3; }
+      .strong { font-size: 13.5px; font-weight: 600; fill: #FFFFFF; }
+      .q { font-size: 15px; font-weight: 700; fill: #EE6F86; }
+      .hidden { font-size: 12.5px; font-weight: 600; fill: #EE6F86; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="428" rx="18" fill="url(#bg)"/>
+  <text x="32" y="44" class="heading" text-anchor="start">Two plans, evaluated on the same futures</text>
+  <text x="968" y="44" class="small" text-anchor="end">Illustrative schematic</text>
+  <rect x="32" y="68" width="540" height="306" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="52" y="96" class="step" text-anchor="start">1  PUBLIC HISTORY</text>
+  <text x="52" y="120" class="title" text-anchor="start">16 periods, then one decision</text>
+  <text x="52" y="140" class="small" text-anchor="start">Delayed reports keep their last value, marked with its age</text>
+  <text x="214" y="166" class="tiny" text-anchor="middle">1</text>
+  <text x="529" y="166" class="tiny" text-anchor="middle">16</text>
+  <text x="371.5" y="166" class="tiny" text-anchor="middle">period</text>
+  <text x="52" y="189" class="label" text-anchor="start">Global record</text>
+  <text x="52" y="204" class="tiny" text-anchor="start">five reported fields</text>
+  <rect x="206" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="210" y="190.1" width="8" height="9.9" rx="2" fill="#7FD8C8"/>
+  <rect x="227" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="231" y="187.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <rect x="248" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="252" y="192.8" width="8" height="7.2" rx="2" fill="#7FD8C8"/>
+  <rect x="269" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="273" y="185.6" width="8" height="14.4" rx="2" fill="#7FD8C8"/>
+  <rect x="290" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="294" y="189.2" width="8" height="10.8" rx="2" fill="#7FD8C8"/>
+  <rect x="311" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="315" y="191.0" width="8" height="9.0" rx="2" fill="#7FD8C8"/>
+  <rect x="332" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="336" y="186.5" width="8" height="13.5" rx="2" fill="#7FD8C8"/>
+  <rect x="353" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="357" y="191.9" width="8" height="8.1" rx="2" fill="#7FD8C8"/>
+  <rect x="374" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="378" y="188.3" width="8" height="11.7" rx="2" fill="#7FD8C8"/>
+  <rect x="395" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="399" y="187.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <rect x="416" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="420" y="191.0" width="8" height="9.0" rx="2" fill="#7FD8C8"/>
+  <rect x="437" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="441" y="189.2" width="8" height="10.8" rx="2" fill="#7FD8C8"/>
+  <rect x="458" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="462" y="185.6" width="8" height="14.4" rx="2" fill="#7FD8C8"/>
+  <rect x="479" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="483" y="192.8" width="8" height="7.2" rx="2" fill="#7FD8C8"/>
+  <rect x="500" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="504" y="190.1" width="8" height="9.9" rx="2" fill="#7FD8C8"/>
+  <rect x="521" y="178" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="525" y="187.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <text x="52" y="235" class="label" text-anchor="start">Primary supplier</text>
+  <text x="52" y="250" class="tiny" text-anchor="start">capacity report</text>
+  <rect x="206" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="210" y="236.1" width="8" height="9.9" rx="2" fill="#7FD8C8"/>
+  <rect x="227" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="231" y="233.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <rect x="248" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="252" y="238.8" width="8" height="7.2" rx="2" fill="#7FD8C8"/>
+  <rect x="269" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="273" y="231.6" width="8" height="14.4" rx="2" fill="#7FD8C8"/>
+  <rect x="290" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="294" y="235.2" width="8" height="10.8" rx="2" fill="#7FD8C8"/>
+  <rect x="311" y="224" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="332" y="224" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="353" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="357" y="237.9" width="8" height="8.1" rx="2" fill="#7FD8C8"/>
+  <rect x="374" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="378" y="234.3" width="8" height="11.7" rx="2" fill="#7FD8C8"/>
+  <rect x="395" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="399" y="233.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <rect x="416" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="420" y="237.0" width="8" height="9.0" rx="2" fill="#7FD8C8"/>
+  <rect x="437" y="224" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="458" y="224" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="479" y="224" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="500" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="504" y="236.1" width="8" height="9.9" rx="2" fill="#7FD8C8"/>
+  <rect x="521" y="224" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="525" y="233.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <text x="52" y="281" class="label" text-anchor="start">Secondary supplier</text>
+  <text x="52" y="296" class="tiny" text-anchor="start">capacity report</text>
+  <rect x="206" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="210" y="282.1" width="8" height="9.9" rx="2" fill="#7FD8C8"/>
+  <rect x="227" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="231" y="279.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <rect x="248" y="270" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="269" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="273" y="277.6" width="8" height="14.4" rx="2" fill="#7FD8C8"/>
+  <rect x="290" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="294" y="281.2" width="8" height="10.8" rx="2" fill="#7FD8C8"/>
+  <rect x="311" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="315" y="283.0" width="8" height="9.0" rx="2" fill="#7FD8C8"/>
+  <rect x="332" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="336" y="278.5" width="8" height="13.5" rx="2" fill="#7FD8C8"/>
+  <rect x="353" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="357" y="283.9" width="8" height="8.1" rx="2" fill="#7FD8C8"/>
+  <rect x="374" y="270" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="395" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="399" y="279.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <rect x="416" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="420" y="283.0" width="8" height="9.0" rx="2" fill="#7FD8C8"/>
+  <rect x="437" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="441" y="281.2" width="8" height="10.8" rx="2" fill="#7FD8C8"/>
+  <rect x="458" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="462" y="277.6" width="8" height="14.4" rx="2" fill="#7FD8C8"/>
+  <rect x="479" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="483" y="284.8" width="8" height="7.2" rx="2" fill="#7FD8C8"/>
+  <rect x="500" y="270" width="16" height="26" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <rect x="521" y="270" width="16" height="26" rx="4" fill="#2B6578"/>
+  <rect x="525" y="279.4" width="8" height="12.6" rx="2" fill="#7FD8C8"/>
+  <text x="52" y="331" class="label" text-anchor="start">Supplier regimes</text>
+  <text x="52" y="346" class="tiny" text-anchor="start">reliable, strained, disrupted</text>
+  <rect x="206" y="320" width="331" height="26" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="371.5" y="337.5" class="hidden" text-anchor="middle">never observed</text>
+  <line x1="546" y1="160" x2="546" y2="352" stroke="#7FD8C8" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="538" y="362" class="strong" text-anchor="end">decision</text>
+  <rect x="592" y="68" width="376" height="306" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="612" y="96" class="step" text-anchor="start">2  PAIRED FUTURES</text>
+  <text x="612" y="120" class="title" text-anchor="start">Same simulated futures for both</text>
+  <text x="612" y="140" class="small" text-anchor="start">Common random numbers; no further orders</text>
+  <path d="M622,238 L674,214 L726,198 L778,190 L830,186" fill="none" stroke="#F2B04B" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="674" cy="214" r="4" fill="#F2B04B"/>
+  <circle cx="726" cy="198" r="4" fill="#F2B04B"/>
+  <circle cx="778" cy="190" r="4" fill="#F2B04B"/>
+  <circle cx="830" cy="186" r="4" fill="#F2B04B"/>
+  <path d="M622,238 L674,262 L726,276 L778,282 L830,286" fill="none" stroke="#7FD8C8" stroke-width="2.4" stroke-linejoin="round"/>
+  <circle cx="674" cy="262" r="4" fill="#7FD8C8"/>
+  <circle cx="726" cy="276" r="4" fill="#7FD8C8"/>
+  <circle cx="778" cy="282" r="4" fill="#7FD8C8"/>
+  <circle cx="830" cy="286" r="4" fill="#7FD8C8"/>
+  <circle cx="622" cy="238" r="5" fill="#FFFFFF"/>
+  <text x="628" y="172" class="label" text-anchor="start">Regular: full quantity, primary</text>
+  <text x="628" y="316" class="label" text-anchor="start">Split: same quantity, both suppliers</text>
+  <text x="674" y="244" class="tiny" text-anchor="middle">1</text>
+  <text x="726" y="244" class="tiny" text-anchor="middle">2</text>
+  <text x="778" y="244" class="tiny" text-anchor="middle">3</text>
+  <text x="830" y="244" class="tiny" text-anchor="middle">4</text>
+  <rect x="846" y="168" width="106" height="36" rx="8" fill="#16384A" stroke="#F2B04B" stroke-width="1.5"/>
+  <text x="899" y="191" class="strong" text-anchor="middle">cost 33.4</text>
+  <rect x="846" y="268" width="106" height="36" rx="8" fill="#16384A" stroke="#7FD8C8" stroke-width="1.5"/>
+  <text x="899" y="291" class="strong" text-anchor="middle">cost 31.0</text>
+  <text x="612" y="346" class="small" text-anchor="start">Choose split: regret 0</text>
+  <text x="612" y="362" class="small" text-anchor="start">Choose regular: regret 33.4 minus 31.0 = 2.4</text>
+  <rect x="36" y="391" width="18" height="18" rx="4" fill="#2B6578"/>
+  <rect x="40" y="397" width="10" height="8" rx="2" fill="#7FD8C8"/>
+  <text x="62" y="404" class="small" text-anchor="start">reported this period</text>
+  <rect x="206" y="391" width="18" height="18" rx="6" fill="url(#hatch)" stroke="#F2B04B" stroke-width="1.5"/>
+  <text x="232" y="404" class="small" text-anchor="start">report delayed</text>
+  <rect x="352" y="391" width="30" height="18" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="390" y="404" class="small" text-anchor="start">never observed</text>
+  <text x="968" y="404" class="small" text-anchor="end">Expected cost = average over the shared futures</text>
+</svg>

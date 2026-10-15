@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" width="1000" height="430" role="img" aria-labelledby="title desc" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title id="title">Three training questions cut from one episode</title>
+  <desc id="desc">A 16-step strip shown three times. Hidden current: steps 0 to 5 are visible context, steps 6 to 8 are hidden and predicted, later steps are not shown. Future with horizon 4: steps 0 to 8 are visible, steps 9 to 12 are predicted. Dynamics with horizon 4: steps 0 to 9 are visible, the actions of steps 10 to 13 are the action input, and step 14 is predicted.</desc>
+
+  <rect x="1" y="1" width="998" height="428" rx="16" fill="#FFFFFF" stroke="#CAD6DB" stroke-width="2"/>
+  <text x="36" y="50" font-size="22" font-weight="700" fill="#16384A">Three training questions cut from one episode</text>
+  <text x="36" y="76" font-size="13.5" fill="#5B6B78">Each row is one training example. Step numbers are illustrative; the rules follow the window builder.</text>
+
+  <!-- step header -->
+  <text x="236" y="114" font-size="12" fill="#5B6B78" text-anchor="end">step</text>
+  <g font-size="12" font-weight="700" fill="#16384A" text-anchor="middle">
+    <text x="270" y="114">0</text><text x="314" y="114">1</text><text x="358" y="114">2</text><text x="402" y="114">3</text>
+    <text x="446" y="114">4</text><text x="490" y="114">5</text><text x="534" y="114">6</text><text x="578" y="114">7</text>
+    <text x="622" y="114">8</text><text x="666" y="114">9</text><text x="710" y="114">10</text><text x="754" y="114">11</text>
+    <text x="798" y="114">12</text><text x="842" y="114">13</text><text x="886" y="114">14</text><text x="930" y="114">15</text>
+  </g>
+
+  <!-- Row A: hidden current -->
+  <text x="36" y="138" font-size="15" font-weight="700" fill="#16384A">Hidden current</text>
+  <text x="36" y="156" font-size="12" fill="#5B6B78">contiguous-time mask</text>
+  <g fill="#2A9D8F">
+    <rect x="250" y="126" width="40" height="30" rx="6"/><rect x="294" y="126" width="40" height="30" rx="6"/>
+    <rect x="338" y="126" width="40" height="30" rx="6"/><rect x="382" y="126" width="40" height="30" rx="6"/>
+    <rect x="426" y="126" width="40" height="30" rx="6"/><rect x="470" y="126" width="40" height="30" rx="6"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#16384A" stroke-width="2">
+    <rect x="515" y="127" width="38" height="28" rx="6"/><rect x="559" y="127" width="38" height="28" rx="6"/>
+    <rect x="603" y="127" width="38" height="28" rx="6"/>
+  </g>
+  <g font-size="15" font-weight="700" fill="#16384A" text-anchor="middle">
+    <text x="534" y="146">?</text><text x="578" y="146">?</text><text x="622" y="146">?</text>
+  </g>
+  <g fill="#E9EEF1">
+    <rect x="646" y="126" width="40" height="30" rx="6"/><rect x="690" y="126" width="40" height="30" rx="6"/>
+    <rect x="734" y="126" width="40" height="30" rx="6"/><rect x="778" y="126" width="40" height="30" rx="6"/>
+    <rect x="822" y="126" width="40" height="30" rx="6"/><rect x="866" y="126" width="40" height="30" rx="6"/>
+    <rect x="910" y="126" width="40" height="30" rx="6"/>
+  </g>
+  <text x="250" y="176" font-size="12" fill="#5B6B78">Context stops at the last hidden step. Other masks hide entities, a neighborhood, an event suffix or one node's reports.</text>
+
+  <!-- Row B: future -->
+  <text x="36" y="210" font-size="15" font-weight="700" fill="#16384A">Future, h = 4</text>
+  <text x="36" y="228" font-size="12" fill="#5B6B78">cutoff after step 8</text>
+  <g fill="#2A9D8F">
+    <rect x="250" y="198" width="40" height="30" rx="6"/><rect x="294" y="198" width="40" height="30" rx="6"/>
+    <rect x="338" y="198" width="40" height="30" rx="6"/><rect x="382" y="198" width="40" height="30" rx="6"/>
+    <rect x="426" y="198" width="40" height="30" rx="6"/><rect x="470" y="198" width="40" height="30" rx="6"/>
+    <rect x="514" y="198" width="40" height="30" rx="6"/><rect x="558" y="198" width="40" height="30" rx="6"/>
+    <rect x="602" y="198" width="40" height="30" rx="6"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#16384A" stroke-width="2">
+    <rect x="647" y="199" width="38" height="28" rx="6"/><rect x="691" y="199" width="38" height="28" rx="6"/>
+    <rect x="735" y="199" width="38" height="28" rx="6"/><rect x="779" y="199" width="38" height="28" rx="6"/>
+  </g>
+  <g font-size="15" font-weight="700" fill="#16384A" text-anchor="middle">
+    <text x="666" y="218">?</text><text x="710" y="218">?</text><text x="754" y="218">?</text><text x="798" y="218">?</text>
+  </g>
+  <g fill="#E9EEF1">
+    <rect x="822" y="198" width="40" height="30" rx="6"/><rect x="866" y="198" width="40" height="30" rx="6"/>
+    <rect x="910" y="198" width="40" height="30" rx="6"/>
+  </g>
+  <text x="250" y="248" font-size="12" fill="#5B6B78">Later actions are removed with everything else after the cutoff. Horizons 1, 2, 4 and 8; at most four target steps.</text>
+
+  <!-- Row C: dynamics -->
+  <text x="36" y="282" font-size="15" font-weight="700" fill="#16384A">Dynamics, h = 4</text>
+  <text x="36" y="300" font-size="12" fill="#5B6B78">decision at step 10</text>
+  <g fill="#2A9D8F">
+    <rect x="250" y="270" width="40" height="30" rx="6"/><rect x="294" y="270" width="40" height="30" rx="6"/>
+    <rect x="338" y="270" width="40" height="30" rx="6"/><rect x="382" y="270" width="40" height="30" rx="6"/>
+    <rect x="426" y="270" width="40" height="30" rx="6"/><rect x="470" y="270" width="40" height="30" rx="6"/>
+    <rect x="514" y="270" width="40" height="30" rx="6"/><rect x="558" y="270" width="40" height="30" rx="6"/>
+    <rect x="602" y="270" width="40" height="30" rx="6"/><rect x="646" y="270" width="40" height="30" rx="6"/>
+  </g>
+  <g fill="#E9EEF1">
+    <rect x="690" y="270" width="40" height="30" rx="6"/><rect x="734" y="270" width="40" height="30" rx="6"/>
+    <rect x="778" y="270" width="40" height="30" rx="6"/><rect x="822" y="270" width="40" height="30" rx="6"/>
+    <rect x="910" y="270" width="40" height="30" rx="6"/>
+  </g>
+  <rect x="867" y="271" width="38" height="28" rx="6" fill="#FFFFFF" stroke="#16384A" stroke-width="2"/>
+  <text x="886" y="290" font-size="15" font-weight="700" fill="#16384A" text-anchor="middle">?</text>
+  <g fill="#E9A23B">
+    <rect x="690" y="306" width="40" height="22" rx="6"/><rect x="734" y="306" width="40" height="22" rx="6"/>
+    <rect x="778" y="306" width="40" height="22" rx="6"/><rect x="822" y="306" width="40" height="22" rx="6"/>
+  </g>
+  <text x="682" y="322" font-size="12" fill="#B9771A" text-anchor="end">actions</text>
+  <line x1="688" y1="262" x2="688" y2="334" stroke="#16384A" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="250" y="350" font-size="12" fill="#5B6B78">Context ends before the decision; both branches of a pair see the same context. The target is the single step at the horizon's end.</text>
+
+  <!-- Legend -->
+  <g font-size="12.5" fill="#2B3A47">
+    <rect x="250" y="378" width="22" height="16" rx="4" fill="#2A9D8F"/><text x="280" y="391">visible context</text>
+    <rect x="402" y="379" width="20" height="14" rx="4" fill="#FFFFFF" stroke="#16384A" stroke-width="2"/>
+    <text x="412" y="390" font-size="11" font-weight="700" fill="#16384A" text-anchor="middle">?</text>
+    <text x="430" y="391">target, predicted in latent space</text>
+    <rect x="642" y="378" width="22" height="16" rx="4" fill="#E9A23B"/><text x="672" y="391">action input</text>
+    <rect x="782" y="378" width="22" height="16" rx="4" fill="#E9EEF1"/><text x="812" y="391">not shown</text>
+  </g>
+</svg>

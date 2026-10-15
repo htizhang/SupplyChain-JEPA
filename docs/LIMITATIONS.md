@@ -14,5 +14,5 @@
   splits. It should not be read as a precise causal estimate of pretraining value.
 - Dataset adapters map heterogeneous schemas into a common vocabulary and can omit source-specific
   information. Adapter quality is part of the method.
-- Model weights and several datasets are private or governed by source-specific terms, so a fresh
-  clone alone is insufficient for full evaluation.
+- Several datasets are governed by source-specific terms and are not redistributed, so the code
+  and the public weights alone are insufficient for full evaluation.

@@ -31,8 +31,8 @@ python -m evaluations.demand_recovery \
   --output /path/to/demand-recovery.json
 ```
 
-The default model revision is immutable. Authentication for the private model
-is handled by the standard Hugging Face client used by `supplychain_jepa`.
+The default model revision is immutable and downloads anonymously from the
+public Hugging Face model repository through the client used by `supplychain_jepa`.
 
 ## Fresh release result
 

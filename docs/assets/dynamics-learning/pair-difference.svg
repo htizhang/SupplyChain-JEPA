@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc">
+  <title id="title">Equal errors for each plan, different plan effects</title>
+  <desc id="desc">One-number teaching example. The targets are 2 for plan A and 3 for plan B, so the target difference B minus A is 1.0. Candidate 1 predicts 2.4 and 2.6 and candidate 2 predicts 2.4 and 3.4. Both candidates miss each plan's target by 0.4. Candidate 1 implies a difference of 0.2, an error of 0.8 in the difference. Candidate 2 implies a difference of 1.0, which matches the target difference.</desc>
+  <style>
+    text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .card { fill: #fcfcfb; stroke: #0b0b0b; stroke-opacity: 0.10; }
+    .t1 { fill: #0b0b0b; }
+    .t2 { fill: #52514e; }
+    .title { font-size: 20px; font-weight: 600; }
+    .sub { font-size: 13.5px; }
+    .rowname { font-size: 14px; font-weight: 600; }
+    .small { font-size: 12px; }
+    .strong { font-weight: 600; }
+    .metric { font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .tick { font-size: 11.5px; font-variant-numeric: tabular-nums; }
+    .note { font-size: 12px; }
+    .grid { stroke: #e1e0d9; stroke-width: 1; }
+    .axis { stroke: #c3c2b7; stroke-width: 1; }
+    .rule { fill: none; stroke: #898781; stroke-width: 1; }
+    .strongrule { stroke: #0b0b0b; stroke-width: 1.5; }
+    .err { stroke-width: 4; stroke-linecap: round; stroke-opacity: 0.35; }
+    .ea { stroke: #2a78d6; }
+    .eb { stroke: #eb6834; }
+    .ek { stroke: #52514e; }
+    .target { fill: #fcfcfb; stroke-width: 2; }
+    .sa { stroke: #2a78d6; }
+    .sb { stroke: #eb6834; }
+    .fa { fill: #2a78d6; }
+    .fb { fill: #eb6834; }
+    .kn { fill: #52514e; }
+    .ksn { fill: #fcfcfb; stroke: #52514e; stroke-width: 2; }
+    .ring { stroke: #fcfcfb; stroke-width: 2; }
+    @media (prefers-color-scheme: dark) {
+      .card { fill: #1a1a19; stroke: #ffffff; stroke-opacity: 0.10; }
+      .t1 { fill: #ffffff; }
+      .t2 { fill: #c3c2b7; }
+      .grid { stroke: #2c2c2a; }
+      .axis { stroke: #383835; }
+      .strongrule { stroke: #ffffff; }
+      .ea { stroke: #3987e5; }
+      .eb { stroke: #d95926; }
+      .ek { stroke: #c3c2b7; }
+      .target { fill: #1a1a19; }
+      .sa { stroke: #3987e5; }
+      .sb { stroke: #d95926; }
+      .fa { fill: #3987e5; }
+      .fb { fill: #d95926; }
+      .kn { fill: #c3c2b7; }
+      .ksn { fill: #1a1a19; stroke: #c3c2b7; }
+      .ring { stroke: #1a1a19; }
+    }
+  </style>
+
+  <rect class="card" x="0.5" y="0.5" width="959" height="419" rx="12"/>
+
+  <text class="t1 title" x="32" y="40">Equal errors for each plan, different plan effects</text>
+  <text class="t2 sub" x="32" y="63">One-number teaching example: the target is 2 for plan A and 3 for plan B. The model applies the same comparison to lists of 384 numbers.</text>
+
+  <g aria-hidden="true">
+    <circle class="ksn" cx="40" cy="92" r="5.5"/>
+    <text class="t2 small" x="52" y="96">target</text>
+    <circle class="kn" cx="112" cy="92" r="5.5"/>
+    <text class="t2 small" x="124" y="96">prediction</text>
+    <rect class="fa" x="210" y="86" width="12" height="12" rx="3"/>
+    <text class="t2 small" x="228" y="96">plan A</text>
+    <rect class="fb" x="290" y="86" width="12" height="12" rx="3"/>
+    <text class="t2 small" x="308" y="96">plan B</text>
+    <line class="err ek" x1="372" y1="92" x2="396" y2="92"/>
+    <text class="t2 small" x="406" y="96">error for one plan</text>
+  </g>
+
+  <g aria-hidden="true">
+    <text class="t1 rowname" x="32" y="196">Candidate 1</text>
+    <text class="t2 small" x="32" y="213">predicts 2.4 and 2.6</text>
+    <line class="axis" x1="170" y1="200" x2="590" y2="200"/>
+    <line class="axis" x1="170.0" y1="197" x2="170.0" y2="203"/>
+    <text class="t2 tick" x="170.0" y="221" text-anchor="middle">1.5</text>
+    <line class="axis" x1="275.0" y1="197" x2="275.0" y2="203"/>
+    <text class="t2 tick" x="275.0" y="221" text-anchor="middle">2.0</text>
+    <line class="axis" x1="380.0" y1="197" x2="380.0" y2="203"/>
+    <text class="t2 tick" x="380.0" y="221" text-anchor="middle">2.5</text>
+    <line class="axis" x1="485.0" y1="197" x2="485.0" y2="203"/>
+    <text class="t2 tick" x="485.0" y="221" text-anchor="middle">3.0</text>
+    <line class="axis" x1="590.0" y1="197" x2="590.0" y2="203"/>
+    <text class="t2 tick" x="590.0" y="221" text-anchor="middle">3.5</text>
+    <path class="rule strongrule" d="M359.0,152 V148 H401.0 V152"/>
+    <text class="t1 small strong" x="380.0" y="140" text-anchor="middle">predicted B − A = 0.2</text>
+    <path class="rule" d="M275.0,180 V176 H485.0 V180"/>
+    <text class="t2 small" x="380.0" y="168" text-anchor="middle">target B − A = 1.0</text>
+    <line class="err ea" x1="275.0" y1="200" x2="359.0" y2="200"/>
+    <line class="err eb" x1="485.0" y1="200" x2="401.0" y2="200"/>
+    <circle class="target sa" cx="275.0" cy="200" r="6"/>
+    <circle class="target sb" cx="485.0" cy="200" r="6"/>
+    <circle class="fa ring" cx="359.0" cy="200" r="5.5"/>
+    <circle class="fb ring" cx="401.0" cy="200" r="5.5"/>
+    <text class="t2 small" x="640" y="162">Error for each plan</text>
+    <text class="t1 metric" x="930" y="162" text-anchor="end">0.4 and 0.4</text>
+    <text class="t2 small" x="640" y="186">Error in the difference</text>
+    <text class="t1 metric" x="930" y="186" text-anchor="end">0.8</text>
+    <line class="grid" x1="640" y1="198" x2="930" y2="198"/>
+    <text class="t1 small" x="640" y="216">Misses the effect of changing the plan</text>
+    <text class="t1 rowname" x="32" y="326">Candidate 2</text>
+    <text class="t2 small" x="32" y="343">predicts 2.4 and 3.4</text>
+    <line class="axis" x1="170" y1="330" x2="590" y2="330"/>
+    <line class="axis" x1="170.0" y1="327" x2="170.0" y2="333"/>
+    <text class="t2 tick" x="170.0" y="351" text-anchor="middle">1.5</text>
+    <line class="axis" x1="275.0" y1="327" x2="275.0" y2="333"/>
+    <text class="t2 tick" x="275.0" y="351" text-anchor="middle">2.0</text>
+    <line class="axis" x1="380.0" y1="327" x2="380.0" y2="333"/>
+    <text class="t2 tick" x="380.0" y="351" text-anchor="middle">2.5</text>
+    <line class="axis" x1="485.0" y1="327" x2="485.0" y2="333"/>
+    <text class="t2 tick" x="485.0" y="351" text-anchor="middle">3.0</text>
+    <line class="axis" x1="590.0" y1="327" x2="590.0" y2="333"/>
+    <text class="t2 tick" x="590.0" y="351" text-anchor="middle">3.5</text>
+    <path class="rule strongrule" d="M359.0,282 V278 H569.0 V282"/>
+    <text class="t1 small strong" x="464.0" y="270" text-anchor="middle">predicted B − A = 1.0</text>
+    <path class="rule" d="M275.0,310 V306 H485.0 V310"/>
+    <text class="t2 small" x="380.0" y="298" text-anchor="middle">target B − A = 1.0</text>
+    <line class="err ea" x1="275.0" y1="330" x2="359.0" y2="330"/>
+    <line class="err eb" x1="485.0" y1="330" x2="569.0" y2="330"/>
+    <circle class="target sa" cx="275.0" cy="330" r="6"/>
+    <circle class="target sb" cx="485.0" cy="330" r="6"/>
+    <circle class="fa ring" cx="359.0" cy="330" r="5.5"/>
+    <circle class="fb ring" cx="569.0" cy="330" r="5.5"/>
+    <text class="t2 small" x="640" y="292">Error for each plan</text>
+    <text class="t1 metric" x="930" y="292" text-anchor="end">0.4 and 0.4</text>
+    <text class="t2 small" x="640" y="316">Error in the difference</text>
+    <text class="t1 metric" x="930" y="316" text-anchor="end">0.0</text>
+    <line class="grid" x1="640" y1="328" x2="930" y2="328"/>
+    <text class="t1 small" x="640" y="346">Recovers the effect of changing the plan</text>
+  </g>
+
+  <text class="t2 note" x="32" y="386">Both candidates miss each plan's target by the same amount. Candidate 2 misses both in the same direction, so its error cancels when the plans are compared.</text>
+  <text class="t2 note" x="32" y="403">Only the comparison of differences tells the two candidates apart. Illustrative arithmetic, not a measured outcome.</text>
+</svg>

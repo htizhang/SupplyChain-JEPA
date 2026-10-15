@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 404" width="1000" height="404" role="img" aria-labelledby="title desc">
+  <title id="title">One product-store example, as every method sees it</title>
+  <desc id="desc">Illustrative schematic of a controlled-stockout demand-recovery example. Left: daily sales totals from in-stock hours for the previous 28 days; three days are marked censored because the product was out of stock for some hours. Right: the target day's 16 operating hours from 06:00 to 22:00. Twelve hours are visible. Four afternoon hours, 15:00 to 19:00, are masked in the shape of a real stockout, and each method estimates their total demand. The label is the actual sales in those hours, because the product was in stock all day. Values are illustrative.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A37"/>
+      <stop offset="1" stop-color="#16384A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D4659"/>
+      <stop offset="1" stop-color="#183D4E"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#2F8F95"/>
+      <stop offset="1" stop-color="#7FD8C8"/>
+    </linearGradient>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#3A3A2A" fill-opacity="0.35"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#F2B04B" stroke-width="2.2"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9FC3CF"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .heading { font-size: 21px; font-weight: 600; fill: #FFFFFF; }
+      .step { font-size: 12.5px; font-weight: 700; fill: #7FD8C8; letter-spacing: 1.2px; }
+      .title { font-size: 17px; font-weight: 600; fill: #FFFFFF; }
+      .label { font-size: 13px; fill: #D5E6EC; }
+      .small { font-size: 12px; fill: #A9C8D3; }
+      .tiny { font-size: 11px; fill: #A9C8D3; }
+      .strong { font-size: 13.5px; font-weight: 600; fill: #FFFFFF; }
+      .q { font-size: 15px; font-weight: 700; fill: #EE6F86; }
+      .hidden { font-size: 12.5px; font-weight: 600; fill: #EE6F86; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1000" height="404" rx="18" fill="url(#bg)"/>
+  <text x="32" y="44" class="heading" text-anchor="start">One product-store example, as every method sees it</text>
+  <text x="968" y="44" class="small" text-anchor="end">Illustrative schematic</text>
+  <rect x="32" y="68" width="360" height="266" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="52" y="96" class="step" text-anchor="start">1  HISTORY</text>
+  <text x="52" y="120" class="title" text-anchor="start">Previous 28 days</text>
+  <text x="52" y="140" class="small" text-anchor="start">Daily sales from in-stock hours</text>
+  <rect x="56.00" y="213.60" width="7.4" height="78.40" rx="2.5" fill="url(#bar)"/>
+  <rect x="67.43" y="216.96" width="7.4" height="75.04" rx="2.5" fill="url(#bar)"/>
+  <rect x="78.86" y="220.32" width="7.4" height="71.68" rx="2.5" fill="url(#bar)"/>
+  <rect x="90.29" y="210.24" width="7.4" height="81.76" rx="2.5" fill="url(#bar)"/>
+  <rect x="101.72" y="201.28" width="7.4" height="90.72" rx="2.5" fill="url(#bar)"/>
+  <rect x="113.15" y="227.04" width="7.4" height="64.96" rx="2.5" fill="url(#bar)"/>
+  <circle cx="116.85" cy="218.04" r="4" fill="#EE6F86"/>
+  <rect x="124.58" y="194.56" width="7.4" height="97.44" rx="2.5" fill="url(#bar)"/>
+  <rect x="136.01" y="211.36" width="7.4" height="80.64" rx="2.5" fill="url(#bar)"/>
+  <rect x="147.44" y="222.56" width="7.4" height="69.44" rx="2.5" fill="url(#bar)"/>
+  <rect x="158.87" y="218.08" width="7.4" height="73.92" rx="2.5" fill="url(#bar)"/>
+  <rect x="170.30" y="208.00" width="7.4" height="84.00" rx="2.5" fill="url(#bar)"/>
+  <rect x="181.73" y="199.04" width="7.4" height="92.96" rx="2.5" fill="url(#bar)"/>
+  <rect x="193.16" y="185.60" width="7.4" height="106.40" rx="2.5" fill="url(#bar)"/>
+  <rect x="204.59" y="236.00" width="7.4" height="56.00" rx="2.5" fill="url(#bar)"/>
+  <circle cx="208.29" cy="227.00" r="4" fill="#EE6F86"/>
+  <rect x="216.02" y="212.48" width="7.4" height="79.52" rx="2.5" fill="url(#bar)"/>
+  <rect x="227.45" y="223.68" width="7.4" height="68.32" rx="2.5" fill="url(#bar)"/>
+  <rect x="238.88" y="215.84" width="7.4" height="76.16" rx="2.5" fill="url(#bar)"/>
+  <rect x="250.31" y="211.36" width="7.4" height="80.64" rx="2.5" fill="url(#bar)"/>
+  <rect x="261.74" y="199.04" width="7.4" height="92.96" rx="2.5" fill="url(#bar)"/>
+  <rect x="273.17" y="183.36" width="7.4" height="108.64" rx="2.5" fill="url(#bar)"/>
+  <rect x="284.60" y="195.68" width="7.4" height="96.32" rx="2.5" fill="url(#bar)"/>
+  <rect x="296.03" y="211.36" width="7.4" height="80.64" rx="2.5" fill="url(#bar)"/>
+  <rect x="307.46" y="223.68" width="7.4" height="68.32" rx="2.5" fill="url(#bar)"/>
+  <circle cx="311.16" cy="214.68" r="4" fill="#EE6F86"/>
+  <rect x="318.89" y="219.20" width="7.4" height="72.80" rx="2.5" fill="url(#bar)"/>
+  <rect x="330.32" y="214.72" width="7.4" height="77.28" rx="2.5" fill="url(#bar)"/>
+  <rect x="341.75" y="196.80" width="7.4" height="95.20" rx="2.5" fill="url(#bar)"/>
+  <rect x="353.18" y="184.48" width="7.4" height="107.52" rx="2.5" fill="url(#bar)"/>
+  <rect x="364.61" y="193.44" width="7.4" height="98.56" rx="2.5" fill="url(#bar)"/>
+  <line x1="52" y1="292.5" x2="372" y2="292.5" stroke="#5E8D9C" stroke-width="1"/>
+  <text x="56" y="312" class="tiny" text-anchor="start">28 days ago</text>
+  <text x="368" y="312" class="tiny" text-anchor="end">yesterday</text>
+  <rect x="412" y="68" width="556" height="266" rx="14" fill="url(#card)" stroke="#2E5A6D"/>
+  <text x="432" y="96" class="step" text-anchor="start">2  TARGET DAY</text>
+  <text x="432" y="120" class="title" text-anchor="start">16 operating hours, 06:00 to 22:00</text>
+  <text x="432" y="140" class="small" text-anchor="start">Visible hours are known; the masked block follows a real stockout pattern</text>
+  <rect x="438.00" y="280.00" width="22" height="12.00" rx="4" fill="url(#bar)"/>
+  <text x="449" y="312" class="tiny" text-anchor="middle">06</text>
+  <rect x="470.00" y="268.00" width="22" height="24.00" rx="4" fill="url(#bar)"/>
+  <text x="481" y="312" class="tiny" text-anchor="middle">07</text>
+  <rect x="502.00" y="256.00" width="22" height="36.00" rx="4" fill="url(#bar)"/>
+  <text x="513" y="312" class="tiny" text-anchor="middle">08</text>
+  <rect x="534.00" y="244.00" width="22" height="48.00" rx="4" fill="url(#bar)"/>
+  <text x="545" y="312" class="tiny" text-anchor="middle">09</text>
+  <rect x="566.00" y="232.00" width="22" height="60.00" rx="4" fill="url(#bar)"/>
+  <text x="577" y="312" class="tiny" text-anchor="middle">10</text>
+  <rect x="598.00" y="220.00" width="22" height="72.00" rx="4" fill="url(#bar)"/>
+  <text x="609" y="312" class="tiny" text-anchor="middle">11</text>
+  <rect x="630.00" y="232.00" width="22" height="60.00" rx="4" fill="url(#bar)"/>
+  <text x="641" y="312" class="tiny" text-anchor="middle">12</text>
+  <rect x="662.00" y="244.00" width="22" height="48.00" rx="4" fill="url(#bar)"/>
+  <text x="673" y="312" class="tiny" text-anchor="middle">13</text>
+  <rect x="694.00" y="244.00" width="22" height="48.00" rx="4" fill="url(#bar)"/>
+  <text x="705" y="312" class="tiny" text-anchor="middle">14</text>
+  <rect x="725" y="196" width="24" height="96" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="737" y="248" class="q" text-anchor="middle">?</text>
+  <text x="737" y="312" class="tiny" text-anchor="middle">15</text>
+  <rect x="757" y="196" width="24" height="96" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="769" y="248" class="q" text-anchor="middle">?</text>
+  <text x="769" y="312" class="tiny" text-anchor="middle">16</text>
+  <rect x="789" y="196" width="24" height="96" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="801" y="248" class="q" text-anchor="middle">?</text>
+  <text x="801" y="312" class="tiny" text-anchor="middle">17</text>
+  <rect x="821" y="196" width="24" height="96" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="833" y="248" class="q" text-anchor="middle">?</text>
+  <text x="833" y="312" class="tiny" text-anchor="middle">18</text>
+  <rect x="854.00" y="244.00" width="22" height="48.00" rx="4" fill="url(#bar)"/>
+  <text x="865" y="312" class="tiny" text-anchor="middle">19</text>
+  <rect x="886.00" y="256.00" width="22" height="36.00" rx="4" fill="url(#bar)"/>
+  <text x="897" y="312" class="tiny" text-anchor="middle">20</text>
+  <rect x="918.00" y="268.00" width="22" height="24.00" rx="4" fill="url(#bar)"/>
+  <text x="929" y="312" class="tiny" text-anchor="middle">21</text>
+  <line x1="432" y1="292.5" x2="948" y2="292.5" stroke="#5E8D9C" stroke-width="1"/>
+  <path d="M725.0,190.0 L725.0,184.0 L845.0,184.0 L845.0,190.0" fill="none" stroke="#EE6F86" stroke-width="1.6"/>
+  <text x="785" y="176" class="hidden" text-anchor="middle">Estimate the total demand here</text>
+  <rect x="36" y="357" width="22" height="14" rx="3" fill="url(#bar)"/>
+  <text x="66" y="368" class="small" text-anchor="start">sales in in-stock hours</text>
+  <circle cx="246" cy="364" r="4.5" fill="#EE6F86"/>
+  <text x="258" y="368" class="small" text-anchor="start">day with out-of-stock hours (censored)</text>
+  <rect x="500" y="355" width="22" height="18" rx="6" fill="#EE6F86" fill-opacity="0.08" stroke="#EE6F86" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="532" y="368" class="small" text-anchor="start">masked hours; their actual sales are the label</text>
+</svg>

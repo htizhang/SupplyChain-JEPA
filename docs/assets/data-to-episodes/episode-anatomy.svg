@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img" aria-labelledby="title desc" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title id="title">Anatomy of a canonical episode</title>
+  <desc id="desc">A static record header and topology on the left. On the right, every step from t = 0 to t = T-1 stores an observation view that becomes context tokens, actions that become context tokens and the Dynamics input, a latent-state view that becomes target tokens, outcomes that stay in the record, and an exogenous digest used to check paired branches.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B6B78"/>
+    </marker>
+    <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16384A"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="598" rx="16" fill="#FFFFFF" stroke="#CAD6DB" stroke-width="2"/>
+
+  <text x="36" y="52" font-size="24" font-weight="700" fill="#16384A">Anatomy of a canonical episode</text>
+  <text x="36" y="80" font-size="14" fill="#5B6B78">One JSONL line per episode. Header and topology are static; every step stores two views of the same moment.</text>
+
+  <!-- Record header card -->
+  <rect x="36" y="108" width="250" height="214" rx="12" fill="#F3F7F8" stroke="#CAD6DB"/>
+  <text x="54" y="136" font-size="15" font-weight="700" fill="#16384A">Record header</text>
+  <g font-size="13" fill="#2B3A47">
+    <circle cx="58" cy="160" r="3" fill="#2A9D8F"/><text x="68" y="164">source family and simulator</text>
+    <circle cx="58" cy="184" r="3" fill="#2A9D8F"/><text x="68" y="188">world, episode and split</text>
+    <circle cx="58" cy="208" r="3" fill="#2A9D8F"/><text x="68" y="212">time unit and horizon</text>
+    <circle cx="58" cy="232" r="3" fill="#2A9D8F"/><text x="68" y="236">objective eligibility</text>
+    <circle cx="58" cy="256" r="3" fill="#2A9D8F"/><text x="68" y="260">branch (null unless paired)</text>
+    <circle cx="58" cy="280" r="3" fill="#2A9D8F"/><text x="68" y="284">exogenous stream ID</text>
+    <circle cx="58" cy="304" r="3" fill="#2A9D8F"/><text x="68" y="308">provenance</text>
+  </g>
+
+  <!-- Topology card -->
+  <rect x="36" y="338" width="250" height="226" rx="12" fill="#F3F7F8" stroke="#CAD6DB"/>
+  <text x="54" y="366" font-size="15" font-weight="700" fill="#16384A">Topology (static)</text>
+  <g stroke="#16384A" stroke-width="2" fill="none">
+    <line x1="108" y1="430" x2="135" y2="430" marker-end="url(#arrow-ink)"/>
+    <line x1="183" y1="430" x2="210" y2="430" marker-end="url(#arrow-ink)"/>
+  </g>
+  <g fill="#FFFFFF" stroke="#16384A" stroke-width="2">
+    <circle cx="86" cy="430" r="22"/>
+    <circle cx="161" cy="430" r="22"/>
+    <circle cx="236" cy="430" r="22"/>
+  </g>
+  <g font-size="13" font-weight="700" fill="#16384A" text-anchor="middle">
+    <text x="86" y="435">n0</text>
+    <text x="161" y="435">n1</text>
+    <text x="236" y="435">n2</text>
+  </g>
+  <g font-size="13" fill="#2B3A47">
+    <text x="54" y="494">typed nodes and edges with</text>
+    <text x="54" y="514">static features; they become</text>
+    <text x="54" y="534">topology tokens in the context</text>
+  </g>
+
+  <!-- Step grid -->
+  <g font-size="13" font-weight="700" fill="#16384A" text-anchor="middle">
+    <text x="468" y="148">t = 0</text>
+    <text x="540" y="148">t = 1</text>
+    <text x="612" y="148">t = 2</text>
+    <text x="684" y="148">…</text>
+    <text x="756" y="148">t = T-1</text>
+  </g>
+
+  <!-- Row labels -->
+  <g text-anchor="end">
+    <text x="424" y="188" font-size="14" font-weight="700" fill="#16384A">observation</text>
+    <text x="424" y="205" font-size="11.5" fill="#5B6B78">entities, edges, global,</text>
+    <text x="424" y="219" font-size="11.5" fill="#5B6B78">events, status</text>
+    <text x="424" y="256" font-size="14" font-weight="700" fill="#16384A">actions</text>
+    <text x="424" y="271" font-size="11.5" fill="#5B6B78">may be empty</text>
+    <text x="424" y="300" font-size="14" font-weight="700" fill="#16384A">latent_state</text>
+    <text x="424" y="317" font-size="11.5" fill="#5B6B78">entities, edges,</text>
+    <text x="424" y="331" font-size="11.5" fill="#5B6B78">global, events</text>
+    <text x="424" y="364" font-size="13" fill="#5B6B78">outcomes</text>
+    <text x="424" y="400" font-size="13" fill="#5B6B78">exogenous digest</text>
+  </g>
+
+  <!-- observation row -->
+  <g fill="#2A9D8F">
+    <rect x="436" y="166" width="64" height="58" rx="8"/>
+    <rect x="508" y="166" width="64" height="58" rx="8"/>
+    <rect x="580" y="166" width="64" height="58" rx="8"/>
+    <rect x="724" y="166" width="64" height="58" rx="8"/>
+  </g>
+  <!-- actions row -->
+  <g fill="#E9A23B">
+    <rect x="436" y="236" width="64" height="30" rx="8"/>
+    <rect x="508" y="236" width="64" height="30" rx="8"/>
+    <rect x="580" y="236" width="64" height="30" rx="8"/>
+    <rect x="724" y="236" width="64" height="30" rx="8"/>
+  </g>
+  <!-- latent_state row -->
+  <g fill="#16384A">
+    <rect x="436" y="278" width="64" height="58" rx="8"/>
+    <rect x="508" y="278" width="64" height="58" rx="8"/>
+    <rect x="580" y="278" width="64" height="58" rx="8"/>
+    <rect x="724" y="278" width="64" height="58" rx="8"/>
+  </g>
+  <!-- outcomes row -->
+  <g fill="#DCE3E8">
+    <rect x="436" y="348" width="64" height="26" rx="6"/>
+    <rect x="508" y="348" width="64" height="26" rx="6"/>
+    <rect x="580" y="348" width="64" height="26" rx="6"/>
+    <rect x="724" y="348" width="64" height="26" rx="6"/>
+  </g>
+  <!-- exogenous digest row -->
+  <g fill="#F3F7F8" stroke="#CAD6DB">
+    <rect x="436" y="384" width="64" height="26" rx="6"/>
+    <rect x="508" y="384" width="64" height="26" rx="6"/>
+    <rect x="580" y="384" width="64" height="26" rx="6"/>
+    <rect x="724" y="384" width="64" height="26" rx="6"/>
+  </g>
+  <!-- ellipsis column -->
+  <g font-size="18" font-weight="700" fill="#8A99A6" text-anchor="middle">
+    <text x="684" y="201">…</text>
+    <text x="684" y="257">…</text>
+    <text x="684" y="313">…</text>
+    <text x="684" y="367">…</text>
+    <text x="684" y="403">…</text>
+  </g>
+
+  <!-- Destinations -->
+  <g stroke="#5B6B78" stroke-width="1.5" fill="none">
+    <line x1="796" y1="195" x2="812" y2="195" marker-end="url(#arrow)"/>
+    <line x1="796" y1="251" x2="812" y2="251" marker-end="url(#arrow)"/>
+    <line x1="796" y1="307" x2="812" y2="307" marker-end="url(#arrow)"/>
+    <line x1="796" y1="361" x2="812" y2="361" marker-end="url(#arrow)"/>
+    <line x1="796" y1="397" x2="812" y2="397" marker-end="url(#arrow)"/>
+  </g>
+  <text x="820" y="192" font-size="14" font-weight="700" fill="#1F7A70">context tokens</text>
+  <text x="820" y="210" font-size="12" fill="#5B6B78">what a planner could see</text>
+  <text x="820" y="249" font-size="14" font-weight="700" fill="#B9771A">context tokens</text>
+  <text x="820" y="266" font-size="12" fill="#5B6B78">and Dynamics input</text>
+  <text x="820" y="304" font-size="14" font-weight="700" fill="#16384A">target tokens</text>
+  <text x="820" y="322" font-size="12" fill="#5B6B78">the world as it was</text>
+  <text x="820" y="365" font-size="12.5" fill="#5B6B78">kept, not tokenized</text>
+  <text x="820" y="401" font-size="12.5" fill="#5B6B78">checks paired branches</text>
+
+  <!-- Source notes -->
+  <rect x="312" y="432" width="318" height="132" rx="12" fill="#EAF4F3" stroke="#B9DCD7"/>
+  <text x="330" y="460" font-size="14" font-weight="700" fill="#16384A">Recorded datasets</text>
+  <g font-size="12.5" fill="#2B3A47">
+    <text x="330" y="486">latent_state repeats the finalized record.</text>
+    <text x="330" y="506">The target is the factual record view,</text>
+    <text x="330" y="526">not a recovered hidden truth.</text>
+  </g>
+  <rect x="646" y="432" width="318" height="132" rx="12" fill="#F3F7F8" stroke="#CAD6DB"/>
+  <text x="664" y="460" font-size="14" font-weight="700" fill="#16384A">Simulators</text>
+  <g font-size="12.5" fill="#2B3A47">
+    <text x="664" y="486">latent_state is the internal state; the</text>
+    <text x="664" y="506">observation passes through delays,</text>
+    <text x="664" y="526">outages and censoring. Stockpyl copies</text>
+    <text x="664" y="546">the full state, and masks hide it later.</text>
+  </g>
+</svg>

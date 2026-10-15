@@ -140,15 +140,15 @@ generated reporting process.
 - **Episode:** a generated serial inventory network with stochastic demand and lead-time inputs.
 - **Tokens:** node-product inventory, backlog, in-transit stock, replenishment edges, demand,
   shipments, costs, and order actions.
-- **State view:** generated reporting omissions hide selected simulator state from context.
+- **State view:** observations copy the complete simulator state; State training masks hide parts.
 - **Dynamics view:** sibling rollouts start from the same state and replay the same demand stream
   and action prefix, then execute different replenishment quantities.
 - **Objective:** State and paired Dynamics prediction.
 
 ### SupplyNetPy
 
-- **Episode:** a generated arbitrary supply-network simulation.
-- **Tokens:** supplier, inventory, demand, disruption, transport, and network-level state.
+- **Episode:** a generated supplier, warehouse, retailer, and customer chain under (s, S) policies.
+- **Tokens:** inventory, backorders, shortages, pending orders, demand, fulfillment, and lead times.
 - **State view:** deterministic reporting rules withhold part of the internal simulator state.
 - **Boundary:** replenishment policy outputs are observational in the released lineage; no paired
   counterfactual claim is made.
