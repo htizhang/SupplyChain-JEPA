@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import subprocess
 from pathlib import Path
 
@@ -34,6 +35,12 @@ FORBIDDEN_TEXT = (
 )
 
 
+MACHINE_TYPE = re.compile(
+    r"(?i)(?<![a-z0-9])(?:ml\.)?[a-z]\d+[a-z0-9-]*\."
+    r"(?:\d+xlarge|xlarge|large|medium|small|micro|nano|metal)(?![a-z0-9])"
+)
+
+
 def repository_files() -> list[Path]:
     output = subprocess.check_output(
         ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
@@ -57,6 +64,8 @@ def check_repository() -> list[str]:
         except UnicodeDecodeError:
             failures.append(f"unreviewed binary file: {relative}")
             continue
+        if MACHINE_TYPE.search(text):
+            failures.append(f"environment-specific machine type: {relative}")
         for marker in FORBIDDEN_TEXT:
             if marker.lower() in text:
                 failures.append(f"environment-specific marker {marker!r}: {relative}")
